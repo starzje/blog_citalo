@@ -1,27 +1,33 @@
-import Displayforum from '@/pages/components/DisplayForum';
-import { useState, useEffect } from 'react';
-import { readForum } from './api';
+import Displayforum from '@/components/DisplayForum';
+import DataFetch from '@/lib/data-fetch';
+import { DataType } from '@/types/data';
 
-export default function Home() {
-  const [response, setResponse] = useState([]);
-  useEffect(() => {
-    const fetchData = async () => {
-      const result = await readForum();
-      setResponse(result.data.data);
-    };
-    fetchData();
-  }, []);
-
+export default function Home({
+  response,
+}: {
+  response: { data: Array<DataType> };
+}) {
   return (
     <div className="asd">
-      {response.map((response, index) => {
+      {response.data.map((data) => {
         return (
           <Displayforum
-            key={index}
-            response={response}
+            key={data.id}
+            response={data}
           />
         );
       })}
     </div>
   );
 }
+
+const client = new DataFetch();
+
+export const getStaticProps = async () => {
+  const allPosts = await client.fetchData('posts', '?populate=*');
+  return {
+    props: {
+      response: allPosts,
+    },
+  };
+};

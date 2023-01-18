@@ -6,6 +6,7 @@ export interface SinglePostProps {
   content: string;
   slug: string;
   image: string;
+  category: string;
 }
 
 const SinglePost: React.FC<SinglePostProps> = ({
@@ -13,8 +14,8 @@ const SinglePost: React.FC<SinglePostProps> = ({
   content,
   slug,
   image,
+  category,
 }) => {
-  console.log(image);
   return (
     <>
       <Image
@@ -28,10 +29,10 @@ const SinglePost: React.FC<SinglePostProps> = ({
         height={500}
       />
       <p>{}</p>
-      <h1 className="text-red-500">{title}</h1>
-      <li>{title}</li>
-      <li>{content}</li>
-      <li>{slug}</li>
+      <h1 className="text-slate-800 text-2xl">{title}</h1>
+      <li>sadržaj: {content}</li>
+      <li className="font-bold text-cyan-700">slug url: {slug}</li>
+      <li className="font-bold text-cyan-700">izdavač: {category}</li>
     </>
   );
 };
