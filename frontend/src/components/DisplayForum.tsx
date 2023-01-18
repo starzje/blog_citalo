@@ -8,7 +8,7 @@ export interface DisplayForumProps {
 const Displayforum: React.FC<DisplayForumProps> = ({ response }) => {
   return (
     <div>
-      <div className={'asd'}>
+      <div>
         <SinglePost
           image={response.attributes.image.data.attributes.url}
           content={response.attributes.content}

@@ -8,8 +8,8 @@ export default function Home({
   response: { data: Array<DataType> };
 }) {
   return (
-    <div className="asd">
-      {response.data.map((data) => {
+    <div>
+      {response?.data?.map((data) => {
         return (
           <Displayforum
             key={data.id}

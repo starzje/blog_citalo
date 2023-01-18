@@ -1,9 +1,7 @@
-'use strict';
-
 /**
  * post router
  */
 
-const { createCoreRouter } = require('@strapi/strapi').factories;
+import { factories } from '@strapi/strapi';
 
-module.exports = createCoreRouter('api::post.post');
+export default factories.createCoreRouter('api::post.post');

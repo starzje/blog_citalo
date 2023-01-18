@@ -113,11 +113,3 @@ exports
 dist
 build
 .strapi-updater.json
-
-
-############################
-# Environment variables
-############################
-
-.env
-.env.example
