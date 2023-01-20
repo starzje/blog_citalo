@@ -1,36 +1,25 @@
-import Image from 'next/image';
 import React from 'react';
-
-export interface SinglePostProps {
-  title: string;
-  content: string;
-  slug: string;
-  image: string;
-  category: string;
-}
+import { SinglePostProps } from '@/types/data';
+import Image from 'next/image';
 
 const SinglePost: React.FC<SinglePostProps> = ({
   title,
   content,
   slug,
-  image,
   category,
+  image,
 }) => {
   return (
     <>
       <Image
+        loading="lazy"
         alt="image of blog post"
-        src={
-          image
-            ? process.env.NEXT_PUBLIC_BASE_URL + image
-            : 'http://via.placeholder.com/500.jpg'
-        }
+        src={image}
         width={500}
         height={500}
       />
-      <p>{}</p>
       <h1 className="text-slate-800 text-2xl">{title}</h1>
-      <li>sadržaj: {content}</li>
+      <p>{content}</p>
       <li className="font-bold text-cyan-700">slug url: {slug}</li>
       <li className="font-bold text-cyan-700">izdavač: {category}</li>
     </>

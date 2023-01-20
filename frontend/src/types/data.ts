@@ -1,16 +1,28 @@
-export interface DataType {
+export interface Data {
   id: number;
   attributes: {
-    image: {
+    title: string;
+    content: string;
+    slug: string;
+    category: string;
+    image?: {
       data: {
         attributes: {
           url: string;
         };
       };
     };
-    content: string;
-    title: string;
-    slug: string;
-    category: string;
   };
+}
+
+export interface ApiResponse {
+  data: Data[];
+}
+
+export interface SinglePostProps {
+  title: string;
+  content: string;
+  slug: string;
+  category: string;
+  image: string;
 }

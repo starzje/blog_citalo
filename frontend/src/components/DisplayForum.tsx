@@ -1,20 +1,22 @@
+import { SinglePostProps } from '@/types/data';
 import SinglePost from './SinglePost';
-import { DataType } from '@/types/data';
 
-export interface DisplayForumProps {
-  response: DataType;
-}
-
-const Displayforum: React.FC<DisplayForumProps> = ({ response }) => {
+const Displayforum: React.FC<SinglePostProps> = ({
+  title,
+  content,
+  slug,
+  category,
+  image,
+}) => {
   return (
     <div>
       <div>
         <SinglePost
-          image={response.attributes.image.data.attributes.url}
-          content={response.attributes.content}
-          title={response.attributes.title}
-          slug={response.attributes.slug}
-          category={response.attributes.category}
+          image={image}
+          content={content}
+          title={title}
+          slug={slug}
+          category={category}
         />
       </div>
     </div>
