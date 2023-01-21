@@ -1,12 +1,12 @@
+import React from 'react';
 import Displayforum from '@/components/DisplayForum';
 import useSWR from 'swr';
-import React from 'react';
-import { fetcher } from '@/lib/dataFetch';
+import { dataFetch } from '@/lib/dataFetch';
 
 const endpoint = process.env.NEXT_PUBLIC_BASE_URL + '/api/posts?populate=*';
 
 function Home() {
-  const { data, error } = useSWR(endpoint, fetcher);
+  const { data, error } = useSWR(endpoint, dataFetch);
 
   if (error) {
     return <div>Error: {error.message}</div>;

@@ -1,9 +1,11 @@
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 import { ApiResponse } from '@/types/data';
+import { Data } from '@/types/data';
 
-export const fetcher = async (url: string) => {
+export const dataFetch = async (url: string): Promise<Data[]> => {
   try {
-    const res = await axios.get<ApiResponse>(url);
+    const res: AxiosResponse<ApiResponse> = await axios.get(url);
+
     if (res.status === 200) {
       return res.data.data;
     } else {
