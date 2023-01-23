@@ -6,7 +6,7 @@ import { FC } from 'react';
 
 const Posts: FC<ListOfAllPostsProps> = ({ posts }) => {
   return (
-    <div>
+    <div className="bg-slate-500 min-h-screen px-5 ">
       {posts.map((post) => {
         const {
           attributes: { slug, title, description },
