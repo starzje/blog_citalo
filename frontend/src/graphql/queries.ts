@@ -18,11 +18,19 @@ const GET_ALL_POSTS = gql`
       data {
         id
         attributes {
+          datum
           title
           content
           description
           category
           slug
+          image {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
         }
       }
     }
@@ -34,6 +42,7 @@ const GET_INDIVIDUAL_POST = gql`
     posts(filters: { slug: { eq: $slug } }) {
       data {
         attributes {
+          datum
           title
           content
           description

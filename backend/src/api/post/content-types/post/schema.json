@@ -36,7 +36,11 @@
       "type": "string"
     },
     "description": {
-      "type": "text"
+      "type": "text",
+      "maxLength": 200
+    },
+    "datum": {
+      "type": "date"
     }
   }
 }

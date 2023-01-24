@@ -1,9 +1,5 @@
 import { MDXRemoteSerializeResult } from 'next-mdx-remote';
 
-export interface ListOfAllPostsProps {
-  posts: AllPostsProps[];
-}
-
 export interface SinglePostProps {
   post: {
     title: string;
@@ -26,9 +22,17 @@ export interface AllPostsProps {
   id: string;
   attributes: {
     title: string;
+    datum: string;
     content: string;
     description: string;
     slug: string;
     category: string;
+    image: {
+      data: {
+        attributes: {
+          url: string;
+        };
+      };
+    };
   };
 }

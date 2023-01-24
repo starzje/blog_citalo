@@ -1,14 +1,19 @@
 import React from 'react';
 import { getStaticPaths } from '@/lib/getStaticPaths';
-import { getStaticProps } from '@/lib/getStaticPropsDynamic';
+import { getStaticProps } from '@/lib/getStaticPropsIndividualPosts';
 import { MDXRemote } from 'next-mdx-remote';
 import Image from 'next/image';
-import { SinglePostProps } from '@/types';
+import { SinglePostProps } from '@/types/types';
 import { FC } from 'react';
+import SEO from '@/components/SEO';
 
 const Post: FC<SinglePostProps> = ({ post }) => {
   return (
     <div>
+      <SEO
+        pageTitle={`Čitalo - Recenzija knjige ${post.title}`}
+        pageDescription="Recenzije knjiga koje sam nedavno pročitala i raznovrsne preporuke za čitanje."
+      />
       <Image
         alt={'Fotografija knjige'}
         src={(process.env.NEXT_PUBLIC_BASE_URL + post.image) as string}
