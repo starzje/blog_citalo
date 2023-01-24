@@ -19,6 +19,11 @@ export const MENI = [
   },
   {
     id: 4,
+    naslov: 'Svaštara',
+    putanja: '/svastara',
+  },
+  {
+    id: 5,
     naslov: 'Kontakt',
     putanja: '/kontakt',
   },

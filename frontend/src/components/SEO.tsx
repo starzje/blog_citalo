@@ -9,11 +9,11 @@ export interface SeoProps {
 const SEO: FC<SeoProps> = ({ pageTitle, pageDescription }) => (
   <Head>
     <title>{pageTitle}</title>
+
     <meta
       name="description"
       content={pageDescription}
     />
-    ...
   </Head>
 );
 

@@ -5,7 +5,7 @@ import { FC } from 'react';
 
 const Nav: FC = () => {
   return (
-    <div className="container mx-auto flex relative justify-between py-5 px-4  ">
+    <div className="container mx-auto flex items-center relative justify-between py-5 px-4  ">
       <img
         className="w-[80px] absolute -bottom-4 left-[40%] md:left-[11%] "
         src="/logo.png"
@@ -16,6 +16,10 @@ const Nav: FC = () => {
           src="./logo_citalo.png"
         />
       </div>
+      <p className="hidden md:inline-block border font-light text-[#57453d] border-black p-2 rounded-2xl">
+        Trenutno čitam:{' '}
+        <span className=" text-[#57453d]">Stephen King - isijavanje</span>
+      </p>
       <ul className="hidden md:flex items-center space-x-1">
         {MENI.map((item) => {
           return (

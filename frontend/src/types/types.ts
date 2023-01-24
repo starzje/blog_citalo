@@ -36,3 +36,32 @@ export interface AllPostsProps {
     };
   };
 }
+
+export interface IstaknuteRecenzijeProps {
+  id: string;
+  attributes: {
+    title: string;
+    author: string;
+    description: string;
+    slug: string;
+    image: {
+      data: {
+        attributes: {
+          url: string;
+        };
+      };
+    };
+    tags: [
+      {
+        tags: string;
+      },
+      {
+        tags: string;
+      },
+      {
+        tags: string;
+      }
+    ];
+    nakladnik: string;
+  };
+}

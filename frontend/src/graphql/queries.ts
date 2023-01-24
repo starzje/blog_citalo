@@ -61,4 +61,34 @@ const GET_INDIVIDUAL_POST = gql`
   }
 `;
 
-export { GET_ALL_POSTS, GET_INDIVIDUAL_POST, GET_ALL_SLUGS };
+const GET_ISTAKNUTE_RECENZIJE = gql`
+  query {
+    istaknuterecenzijes {
+      data {
+        id
+        attributes {
+          title
+          author
+          description
+          slug
+          image {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
+          tags
+          nakladnik
+        }
+      }
+    }
+  }
+`;
+
+export {
+  GET_ALL_POSTS,
+  GET_INDIVIDUAL_POST,
+  GET_ALL_SLUGS,
+  GET_ISTAKNUTE_RECENZIJE,
+};

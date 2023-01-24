@@ -3,7 +3,7 @@ import Nav from '@/components/layout/Nav';
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 
-export default function App({ Component, pageProps }: AppProps) {
+const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <div className=" bg-stone-200 relative">
       <div className="max-w-[1100px] min-h-screen   m-auto ">
@@ -14,4 +14,6 @@ export default function App({ Component, pageProps }: AppProps) {
       </div>
     </div>
   );
-}
+};
+
+export default App;
