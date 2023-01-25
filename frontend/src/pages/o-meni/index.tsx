@@ -9,7 +9,7 @@ const OMeni: FC = () => {
         pageTitle="Čitalo - O meni"
         pageDescription="Ovdje me možete upoznati malo bolje."
       />
-      O meni stranica
+      <div className="relative">O meni stranica</div>
     </Container>
   );
 };

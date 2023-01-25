@@ -1,14 +1,18 @@
 import { MENI } from '@/constants';
 import Link from 'next/link';
-import React from 'react';
-import { FC } from 'react';
+import { Dispatch, FC, SetStateAction } from 'react';
 import logo_citalo from '/public/logo_citalo.png';
 import logo from '/public/logo.png';
 import Image from 'next/image';
+import { Twirl as Hamburger } from 'hamburger-react';
 
-const Nav: FC = () => {
+const Nav: FC<{
+  isOpen: boolean;
+  setIsOpen: Dispatch<SetStateAction<boolean>>;
+}> = ({ isOpen, setIsOpen }) => {
+  console.log(isOpen);
   return (
-    <header className="container mx-auto flex items-center relative justify-between py-5 px-4  ">
+    <header className="container mx-auto flex items-center relative justify-between h-[85px] py-5 px-4  ">
       <Image
         className="w-[80px] absolute -bottom-4 left-[40%] md:left-[11%] "
         src={logo}
@@ -44,6 +48,12 @@ const Nav: FC = () => {
           })}
         </ul>
       </nav>
+      <div className="md:hidden inline-block">
+        <Hamburger
+          toggled={isOpen}
+          toggle={setIsOpen}
+        />
+      </div>
     </header>
   );
 };

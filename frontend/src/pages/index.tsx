@@ -2,13 +2,13 @@ import React from 'react';
 import { FC } from 'react';
 import { Container, SEO } from 'src/components';
 import { getStaticProps } from '@/lib/getStaticPropsNaslovna';
-import { IstaknuteRecenzijeProps } from '@/types';
+import { IstaknuteRecenzijeProps, NedavniPostoviProps } from '@/types';
 import Hero from '@/components/naslovnica/Hero';
 import IstaknuteRecenzije from '@/components/naslovnica/IstaknuteRecenzije';
 
 interface NaslovnaProps {
   recenzije: IstaknuteRecenzijeProps[];
-  nedavnipostovi: any;
+  nedavnipostovi: NedavniPostoviProps[];
 }
 
 const Home: FC<NaslovnaProps> = ({ recenzije, nedavnipostovi }) => {
@@ -18,6 +18,7 @@ const Home: FC<NaslovnaProps> = ({ recenzije, nedavnipostovi }) => {
         pageTitle="Čitalo Books"
         pageDescription="Blog o knjigama i čitanju, te recenziji knjiga"
       />
+
       <Hero />
       <IstaknuteRecenzije
         recenzije={recenzije}
