@@ -1,7 +1,5 @@
 import React, { FC, useState } from 'react';
-import MobileMenu from '../MobileMenu';
-import Footer from './Footer';
-import Nav from './Nav';
+import { Nav, Footer, MobileMenu } from 'src/components';
 
 const PageConnectedLayout: FC<{ children: React.ReactNode }> = ({
   children,

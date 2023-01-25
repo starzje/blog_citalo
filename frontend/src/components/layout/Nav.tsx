@@ -1,16 +1,15 @@
 import { MENI } from '@/constants';
 import Link from 'next/link';
-import { Dispatch, FC, SetStateAction } from 'react';
+import { FC } from 'react';
 import logo_citalo from '/public/logo_citalo.png';
 import logo from '/public/logo.png';
 import Image from 'next/image';
 import { Twirl as Hamburger } from 'hamburger-react';
+import { MobileMenuProps } from '@/types';
+import { useRouter } from 'next/router';
 
-const Nav: FC<{
-  isOpen: boolean;
-  setIsOpen: Dispatch<SetStateAction<boolean>>;
-}> = ({ isOpen, setIsOpen }) => {
-  console.log(isOpen);
+const Nav: FC<MobileMenuProps> = ({ isOpen, setIsOpen }) => {
+  const router = useRouter();
   return (
     <header className="container mx-auto flex items-center relative justify-between h-[85px] py-5 px-4  ">
       <Image
@@ -38,11 +37,17 @@ const Nav: FC<{
         <ul className="hidden md:flex items-center space-x-1">
           {MENI.map((item) => {
             return (
-              <li
-                className="px-2 py-1 rounded-md hover:bg-gray-200 font-light"
-                key={item.id}
-              >
-                <Link href={item.putanja}>{item.naslov}</Link>
+              <li key={item.id}>
+                <Link
+                  className={` ${
+                    router.pathname === item.putanja
+                      ? 'bg-[#57453d] text-white'
+                      : ''
+                  } px-2 py-1 rounded-2xl hover:bg-[#57453d] hover:text-white transition duration-300 font-light`}
+                  href={item.putanja}
+                >
+                  {item.naslov}
+                </Link>
               </li>
             );
           })}

@@ -11,7 +11,7 @@ const Posts: FC<{ posts: AllPostsProps[] }> = ({ posts }) => {
         pageTitle="Čitalo - Recenzije"
         pageDescription="Recenzije knjiga koje sam nedavno pročitala i raznovrsne preporuke za čitanje."
       />
-      <div className="mx-auto max-w-screen-xl px-4 md:px-8 relative">
+      <div className="mx-auto max-w-screen-xl px-4 md:px-8 relative pt-20">
         <div className="mb-10 md:mb-16">
           <h2 className="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">
             Recenzije

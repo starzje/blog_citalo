@@ -1,4 +1,5 @@
 import { MDXRemoteSerializeResult } from 'next-mdx-remote';
+import { Dispatch, SetStateAction } from 'react';
 
 type Image = {
   data: {
@@ -67,4 +68,14 @@ export interface NedavniPostoviProps {
     tags: Tags[];
     image: Image;
   };
+}
+
+export interface MobileMenuProps {
+  isOpen?: boolean;
+  setIsOpen: Dispatch<SetStateAction<boolean>>;
+}
+
+export interface IstaknuteRecenzijeElementProps {
+  recenzija: IstaknuteRecenzijeProps;
+  path: 'recenzije' | 'svastara';
 }

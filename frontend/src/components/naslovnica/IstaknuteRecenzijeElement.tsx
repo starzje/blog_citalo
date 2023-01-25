@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
-import { IstaknuteRecenzijeProps } from '@/types';
+import { IstaknuteRecenzijeElementProps } from '@/types';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const IstaknuteRecenzijeElement: FC<{
-  recenzija: IstaknuteRecenzijeProps;
-  path: 'recenzije' | 'svastara';
-}> = ({ recenzija, path }) => {
+const IstaknuteRecenzijeElement: FC<IstaknuteRecenzijeElementProps> = ({
+  recenzija,
+  path,
+}) => {
   return (
     <article className="h-90  relative col-span-1 m-auto min-h-full cursor-pointer overflow-hidden rounded-lg pb-2 shadow-lg transition-transform duration-200 hover:translate-y-2 border bg-white">
       <Link

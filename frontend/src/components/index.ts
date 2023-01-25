@@ -1,9 +1,13 @@
 export { default as Article } from 'src/components/blog/Article';
 export { default as IstaknuteRecenzijeElement } from '@/components/naslovnica/IstaknuteRecenzijeElement';
+export { default as IstaknuteRecenzije } from '@/components/naslovnica/IstaknuteRecenzije';
 export { default as SEO } from 'src/components/blog/SEO';
 export { default as Footer } from 'src/components/layout/Footer';
 export { default as Nav } from 'src/components/layout/Nav';
+export { default as Hero } from 'src/components/naslovnica/Hero';
 export { default as LinkButtons } from 'src/components/UI/LinkButtons';
 export { default as SvgBackground } from 'src/components/UI/SvgBackground';
 export { default as SvgDivider } from 'src/components/UI/SvgDivider';
 export { default as Container } from 'src/components/layout/Container';
+export { default as PageConnectedLayout } from 'src/components/layout/PageConnectedLayout';
+export { default as MobileMenu } from 'src/components/layout/MobileMenu';

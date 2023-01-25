@@ -1,6 +1,6 @@
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
-import PageConnectedLayout from '@/components/layout/PageConnectedLayout';
+import { PageConnectedLayout } from 'src/components';
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (

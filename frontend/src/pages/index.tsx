@@ -1,10 +1,8 @@
 import React from 'react';
 import { FC } from 'react';
-import { Container, SEO } from 'src/components';
+import { Container, SEO, IstaknuteRecenzije, Hero } from 'src/components';
 import { getStaticProps } from '@/lib/getStaticPropsNaslovna';
 import { IstaknuteRecenzijeProps, NedavniPostoviProps } from '@/types';
-import Hero from '@/components/naslovnica/Hero';
-import IstaknuteRecenzije from '@/components/naslovnica/IstaknuteRecenzije';
 
 interface NaslovnaProps {
   recenzije: IstaknuteRecenzijeProps[];

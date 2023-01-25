@@ -1,10 +1,9 @@
 import { MENI } from '@/constants';
+import { MobileMenuProps } from '@/types';
 import Link from 'next/link';
-import React, { Dispatch, FC, SetStateAction } from 'react';
+import React, { FC } from 'react';
 
-const MobileMenu: FC<{ setIsOpen: Dispatch<SetStateAction<boolean>> }> = ({
-  setIsOpen,
-}) => {
+const MobileMenu: FC<MobileMenuProps> = ({ setIsOpen }) => {
   return (
     <>
       <div className=" overflow-hidden h-[calc(100vh-85px)]  bg-[#57453d]">
@@ -23,7 +22,7 @@ const MobileMenu: FC<{ setIsOpen: Dispatch<SetStateAction<boolean>> }> = ({
                         setIsOpen((prev) => !prev);
                       }, 300)
                     }
-                    className=" py-4 block text-center text-xl  text-white rounded-md hover:bg-[#e7e5e4] hover:text-[#57453d] font-light transition duration-300"
+                    className="py-4 block text-center text-xl  text-white rounded-md hover:bg-[#e7e5e4] hover:text-[#57453d] font-light transition duration-300"
                     href={item.putanja}
                   >
                     {item.naslov}
