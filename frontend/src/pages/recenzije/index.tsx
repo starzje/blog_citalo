@@ -2,11 +2,11 @@ import { AllPostsProps } from '@/types';
 import React from 'react';
 import { getStaticProps } from '@/lib/getStaticPropsAllPosts';
 import { FC } from 'react';
-import { Article, SEO } from 'src/components';
+import { Article, Container, SEO } from 'src/components';
 
 const Posts: FC<{ posts: AllPostsProps[] }> = ({ posts }) => {
   return (
-    <section className="bg-white py-6 sm:py-8 lg:py-12 min-h-screen">
+    <Container>
       <SEO
         pageTitle="Čitalo - Recenzije"
         pageDescription="Recenzije knjiga koje sam nedavno pročitala i raznovrsne preporuke za čitanje."
@@ -35,7 +35,7 @@ const Posts: FC<{ posts: AllPostsProps[] }> = ({ posts }) => {
           })}
         </div>
       </div>
-    </section>
+    </Container>
   );
 };
 

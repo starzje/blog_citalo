@@ -1,0 +1,52 @@
+import { IstaknuteRecenzijeProps, NedavniPostoviProps } from '@/types';
+import React, { FC } from 'react';
+import { IstaknuteRecenzijeElement } from 'src/components';
+
+interface IstaknuteRecenzijeInterface {
+  recenzije: IstaknuteRecenzijeProps[];
+  nedavnipostovi: NedavniPostoviProps[];
+}
+
+const IstaknuteRecenzije: FC<IstaknuteRecenzijeInterface> = ({
+  recenzije,
+  nedavnipostovi,
+}) => {
+  return (
+    <section className="relative bg-[#e7e5e4]  shadow-md min-h-screen">
+      <h2 className="pl-6 text-3xl font-bold text-center text-[#57453d]">
+        Nedavne objave
+      </h2>
+      <div className="py-8 ">
+        <div className="mx-auto grid max-w-screen-lg grid-cols-1 gap-5 p-5 sm:grid-cols-2 md:grid-cols-3 lg:gap-10">
+          {nedavnipostovi?.map((nedavnipost) => {
+            return (
+              <IstaknuteRecenzijeElement
+                key={nedavnipost.id}
+                path={'svastara'}
+                recenzija={nedavnipost}
+              />
+            );
+          })}
+        </div>
+      </div>
+      <h2 className="pl-6 text-3xl font-bold text-center text-[#57453d]">
+        Istaknute objave
+      </h2>
+      <div className="py-8 ">
+        <div className="mx-auto grid max-w-screen-lg grid-cols-1 gap-5 p-5 sm:grid-cols-2 md:grid-cols-3 lg:gap-10">
+          {recenzije?.map((recenzija) => {
+            return (
+              <IstaknuteRecenzijeElement
+                key={recenzija.id}
+                path={'recenzije'}
+                recenzija={recenzija}
+              />
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default IstaknuteRecenzije;

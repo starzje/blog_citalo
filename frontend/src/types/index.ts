@@ -1,5 +1,17 @@
 import { MDXRemoteSerializeResult } from 'next-mdx-remote';
 
+type Image = {
+  data: {
+    attributes: {
+      url: string;
+    };
+  };
+};
+
+type Tags = {
+  tags: string;
+};
+
 export interface SinglePostProps {
   post: {
     title: string;
@@ -27,13 +39,7 @@ export interface AllPostsProps {
     description: string;
     slug: string;
     category: string;
-    image: {
-      data: {
-        attributes: {
-          url: string;
-        };
-      };
-    };
+    image: Image;
   };
 }
 
@@ -44,24 +50,21 @@ export interface IstaknuteRecenzijeProps {
     author: string;
     description: string;
     slug: string;
-    image: {
-      data: {
-        attributes: {
-          url: string;
-        };
-      };
-    };
-    tags: [
-      {
-        tags: string;
-      },
-      {
-        tags: string;
-      },
-      {
-        tags: string;
-      }
-    ];
+    image: Image;
+    tags: Tags[];
     nakladnik: string;
+  };
+}
+
+export interface NedavniPostoviProps {
+  id: string;
+  attributes: {
+    title: string;
+    author: string;
+    description: string;
+    slug: string;
+    nakladnik: string;
+    tags: Tags[];
+    image: Image;
   };
 }

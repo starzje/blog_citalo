@@ -1,16 +1,16 @@
-import { SEO } from 'src/components';
+import { Container, SEO } from 'src/components';
 import React from 'react';
 import { FC } from 'react';
 
 const OMeni: FC = () => {
   return (
-    <div className="bg-slate-500 min-h-screen px-5">
+    <Container>
       <SEO
         pageTitle="Čitalo - O meni"
         pageDescription="Ovdje me možete upoznati malo bolje."
       />
       O meni stranica
-    </div>
+    </Container>
   );
 };
 
