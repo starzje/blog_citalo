@@ -1,4 +1,4 @@
-export { default as Article } from 'src/components/blog/Article';
+export { default as Article } from '@/components/blog/recenzije/Article';
 export { default as IstaknuteRecenzijeElement } from '@/components/naslovnica/IstaknuteRecenzijeElement';
 export { default as IstaknuteRecenzije } from '@/components/naslovnica/IstaknuteRecenzije';
 export { default as SEO } from 'src/components/blog/SEO';
@@ -11,3 +11,5 @@ export { default as SvgDivider } from 'src/components/UI/SvgDivider';
 export { default as Container } from 'src/components/layout/Container';
 export { default as PageConnectedLayout } from 'src/components/layout/PageConnectedLayout';
 export { default as MobileMenu } from 'src/components/layout/MobileMenu';
+export { default as RenderedArticles } from 'src/components/blog/recenzije/RenderedArticles';
+export { default as InputSearchBar } from 'src/components/blog/recenzije/InputSearchBar';

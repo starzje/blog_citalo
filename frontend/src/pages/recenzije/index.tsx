@@ -1,11 +1,16 @@
 import { AllPostsProps } from '@/types';
-import { useState } from 'react';
+import { useState, FC } from 'react';
 import { getStaticProps } from '@/lib/getStaticPropsAllPosts';
-import { FC } from 'react';
-import { Article, Container, SEO } from 'src/components';
+import {
+  Container,
+  SEO,
+  RenderedArticles,
+  InputSearchBar,
+} from 'src/components';
 
 const Posts: FC<{ posts: AllPostsProps[] }> = ({ posts }) => {
   const [searchTerm, setSearchTerm] = useState('');
+
   return (
     <Container>
       <SEO
@@ -26,75 +31,16 @@ const Posts: FC<{ posts: AllPostsProps[] }> = ({ posts }) => {
           </p>
         </div>
 
-        {/* SEARCH INPUT STARTS HERE */}
-        <div className="mx-auto  max-w-screen-md pb-10 leading-6">
-          <form className="mx-auto relative flex  flex-col justify-between rounded-lg border p-2 sm:flex-row sm:items-center sm:p-0 md:w-1/2 w-full">
-            <input
-              type="name"
-              name="search"
-              autoComplete="off"
-              className="pl-3 w-full  cursor-text rounded-md py-4 outline-double  outline-2 outline-dark-brown ring-light-brown sm:border-0   focus:ring "
-              placeholder="Pretraži recenzije:"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
-
-            <div className="left-0 top-14 absolute z-[999] w-full bg-light-brown divide-y rounded-b-xl shadow-lg sm:mr-32 ">
-              {searchTerm !== '' &&
-                posts
-                  .filter((post) =>
-                    post.attributes.title
-                      .toLowerCase()
-                      .includes(searchTerm.toLowerCase())
-                  )
-                  .map((post) => {
-                    return (
-                      <div
-                        key={post.id}
-                        className=" cursor-pointer px-4 py-2 text-gray-600 hover:bg-dark-brown hover:text-white"
-                        onClick={() => setSearchTerm(post.attributes.title)}
-                      >
-                        <span className="m-0 font-medium">
-                          {post.attributes.title}
-                        </span>
-                      </div>
-                    );
-                  })
-                  .slice(0, 4)}
-            </div>
-          </form>
-        </div>
-
-        {/* SEARCH INPUT ENDS HERE */}
+        <InputSearchBar
+          posts={posts}
+          setSearchTerm={setSearchTerm}
+          searchTerm={searchTerm}
+        />
         <div className="grid gap-8 sm:grid-cols-2 sm:gap-12 lg:grid-cols-2 xl:grid-cols-2 xl:gap-16">
-          {searchTerm === '' ||
-          posts.filter((post) =>
-            post.attributes.title
-              .toLowerCase()
-              .includes(searchTerm.toLowerCase())
-          ).length === 0
-            ? posts.map((post) => {
-                return (
-                  <Article
-                    key={post.id}
-                    posts={post}
-                  />
-                );
-              })
-            : posts
-                .filter((post) =>
-                  post.attributes.title
-                    .toLowerCase()
-                    .includes(searchTerm.toLowerCase())
-                )
-                .map((post) => {
-                  return (
-                    <Article
-                      key={post.id}
-                      posts={post}
-                    />
-                  );
-                })}
+          <RenderedArticles
+            posts={posts}
+            searchTerm={searchTerm}
+          />
         </div>
       </div>
     </Container>

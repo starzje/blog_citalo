@@ -79,3 +79,9 @@ export interface IstaknuteRecenzijeElementProps {
   recenzija: IstaknuteRecenzijeProps;
   path: 'recenzije' | 'svastara';
 }
+
+export interface ArticleProps {
+  posts: AllPostsProps[];
+  setSearchTerm?: Dispatch<SetStateAction<string>>;
+  searchTerm: string;
+}

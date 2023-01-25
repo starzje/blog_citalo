@@ -26,10 +26,10 @@ const Article: FC<{ posts: AllPostsProps }> = ({ posts }) => {
       <div className="flex flex-col gap-2">
         <span className="text-sm text-gray-400">{posts.attributes.datum}</span>
 
-        <h2 className="text-xl font-bold text-gray-800">
+        <h2 className="text-xl font-bold text-dark-brown">
           <Link
             href={`recenzije/${posts.attributes.slug}`}
-            className="transition duration-100 hover:text-blue-500 active:text-blue-600"
+            className="transition duration-100 hover:text-light-brown active:text-light-brown"
           >
             {posts.attributes.title}
           </Link>
@@ -40,7 +40,7 @@ const Article: FC<{ posts: AllPostsProps }> = ({ posts }) => {
         <div>
           <Link
             href={`recenzije/${posts.attributes.slug}`}
-            className="font-semibold text-blue-500 transition duration-100 hover:text-blue-600 active:text-rose-700"
+            className="font-semibold text-dark-brown transition duration-100 hover:text-light-brown active:text-rose-700"
           >
             Pročitaj više...
           </Link>
