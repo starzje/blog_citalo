@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { IstaknuteRecenzijeProps } from '@/types/types';
+import { IstaknuteRecenzijeProps } from '@/types';
 import Link from 'next/link';
 
 const IstaknuteRecenzije: FC<{ recenzija: IstaknuteRecenzijeProps }> = ({

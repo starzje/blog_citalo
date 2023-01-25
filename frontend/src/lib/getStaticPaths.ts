@@ -1,4 +1,4 @@
-import { PostSlugProps } from '@/types/types';
+import { PostSlugProps } from '@/types';
 import { GET_ALL_SLUGS } from '@/graphql/queries';
 import { client } from './apollo-client';
 

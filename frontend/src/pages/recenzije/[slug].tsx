@@ -3,9 +3,9 @@ import { getStaticPaths } from '@/lib/getStaticPaths';
 import { getStaticProps } from '@/lib/getStaticPropsIndividualPosts';
 import { MDXRemote } from 'next-mdx-remote';
 import Image from 'next/image';
-import { SinglePostProps } from '@/types/types';
+import { SinglePostProps } from '@/types';
 import { FC } from 'react';
-import SEO from '@/components/SEO';
+import { SEO } from 'src/components';
 
 const Post: FC<SinglePostProps> = ({ post }) => {
   return (

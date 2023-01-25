@@ -1,9 +1,8 @@
-import { AllPostsProps } from '@/types/types';
+import { AllPostsProps } from '@/types';
 import React from 'react';
 import { getStaticProps } from '@/lib/getStaticPropsAllPosts';
 import { FC } from 'react';
-import Article from '@/components/Article';
-import SEO from '@/components/SEO';
+import { Article, SEO } from 'src/components';
 
 const Posts: FC<{ posts: AllPostsProps[] }> = ({ posts }) => {
   return (

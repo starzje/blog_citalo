@@ -1,15 +1,17 @@
 import React from 'react';
 import { FC } from 'react';
-import SEO from '@/components/SEO';
-import LinkButtons from '@/components/UI/LinkButtons';
 import Image from 'next/image';
-import SvgDivider from '@/components/UI/SvgDivider';
-import SvgBackground from '@/components/UI/SvgBackground';
-import IstaknuteRecenzije from '@/components/IstaknuteRecenzije';
+import {
+  IstaknuteRecenzije,
+  SvgDivider,
+  SvgBackground,
+  SEO,
+  LinkButtons,
+} from 'src/components';
 import { FaInstagram } from 'react-icons/fa';
 import { HiOutlineBookOpen } from 'react-icons/hi';
 import { getStaticProps } from '@/lib/getStaticPropsSveRecenzije';
-import { IstaknuteRecenzijeProps } from '@/types/types';
+import { IstaknuteRecenzijeProps } from '@/types';
 
 const Home: FC<{ recenzije: IstaknuteRecenzijeProps[] }> = ({ recenzije }) => {
   return (
