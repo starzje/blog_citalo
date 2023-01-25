@@ -12,8 +12,8 @@ const IstaknuteRecenzije: FC<IstaknuteRecenzijeInterface> = ({
   nedavnipostovi,
 }) => {
   return (
-    <section className="relative bg-[#e7e5e4]  shadow-md min-h-screen">
-      <h2 className="pl-6 text-3xl font-bold text-center text-[#57453d]">
+    <section className="relative bg-light-brown  shadow-md min-h-screen">
+      <h2 className="pl-6 text-3xl font-bold text-center text-dark-brown">
         Nedavne objave
       </h2>
       <div className="py-8 ">
@@ -29,7 +29,7 @@ const IstaknuteRecenzije: FC<IstaknuteRecenzijeInterface> = ({
           })}
         </div>
       </div>
-      <h2 className="pl-6 text-3xl font-bold text-center text-[#57453d]">
+      <h2 className="pl-6 text-3xl font-bold text-center text-dark-brown">
         Istaknute objave
       </h2>
       <div className="py-8 ">

@@ -29,9 +29,9 @@ const Nav: FC<MobileMenuProps> = ({ isOpen, setIsOpen }) => {
           width={120}
         />
       </Link>
-      <p className="hidden md:inline-block border font-light text-[#57453d] border-black p-2 rounded-2xl">
+      <p className="hidden md:inline-block border font-light text-dark-brown border-black p-2 rounded-2xl">
         Trenutno čitam:{' '}
-        <span className=" text-[#57453d]">Stephen King - Isijavanje</span>
+        <span className=" text-dark-brown">Stephen King - Isijavanje</span>
       </p>
       <nav>
         <ul className="hidden md:flex items-center space-x-1">
@@ -41,9 +41,9 @@ const Nav: FC<MobileMenuProps> = ({ isOpen, setIsOpen }) => {
                 <Link
                   className={` ${
                     router.pathname === item.putanja
-                      ? 'bg-[#57453d] text-white'
+                      ? 'bg-dark-brown text-white'
                       : ''
-                  } px-2 py-1 rounded-2xl hover:bg-[#57453d] hover:text-white transition duration-300 font-light`}
+                  } px-2 py-1 rounded-2xl hover:bg-dark-brown hover:text-white transition duration-300 font-light`}
                   href={item.putanja}
                 >
                   {item.naslov}

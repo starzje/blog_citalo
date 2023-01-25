@@ -6,7 +6,7 @@ import React, { FC } from 'react';
 const MobileMenu: FC<MobileMenuProps> = ({ setIsOpen }) => {
   return (
     <>
-      <div className=" overflow-hidden h-[calc(100vh-85px)]  bg-[#57453d]">
+      <div className=" overflow-hidden h-[calc(100vh-85px)]  bg-dark-brown">
         <nav>
           <ul className=" items-center space-x-1">
             {MENI.map((item) => {
@@ -22,7 +22,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ setIsOpen }) => {
                         setIsOpen((prev) => !prev);
                       }, 300)
                     }
-                    className="py-4 block text-center text-xl  text-white rounded-md hover:bg-[#e7e5e4] hover:text-[#57453d] font-light transition duration-300"
+                    className="py-4 block text-center text-xl  text-white rounded-md hover:bg-light-brown hover:text-dark-brown font-light transition duration-300"
                     href={item.putanja}
                   >
                     {item.naslov}

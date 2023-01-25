@@ -8,13 +8,16 @@ module.exports = {
     fontFamily: {
       sans: ['Poppins', 'sans-serif'],
     },
+
     extend: {
       backgroundImage: {
         'hero-pattern': "url('/background.jpg')",
       },
+      colors: {
+        'dark-brown': '#57453d',
+        'light-brown': '#e7e5e4',
+      },
     },
-    plugins: {
-      'tailwindcss/nesting': 'postcss-nesting',
-    },
+    plugins: {},
   },
 };

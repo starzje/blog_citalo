@@ -25,7 +25,7 @@ const IstaknuteRecenzijeElement: FC<IstaknuteRecenzijeElementProps> = ({
           }
         />
         <div className="w-full p-4">
-          <p className="text-md font-medium text-[#57453d]">
+          <p className="text-md font-medium text-dark-brown">
             {recenzija.attributes.author}
           </p>
           <p className="mb-2 text-xl font-medium text-gray-800">

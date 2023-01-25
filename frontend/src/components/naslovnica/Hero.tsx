@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section className=" flex flex-wrap items-center justify-between pb-10  relative  ">
       <div className="w-full md:w-1/2 px-7 md:text-left text-center md:mt-0 mt-10 ">
-        <h1 className="text-4xl font-bold leading-tight mb-10 relative text-[#57453d]">
+        <h1 className="text-4xl font-bold leading-tight mb-10 relative text-dark-brown">
           Blog o knjigama
         </h1>
         <p className="text-base leading-8 tracking-wide mb-5 ">
