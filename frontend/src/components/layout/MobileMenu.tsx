@@ -16,7 +16,11 @@ const MobileMenu: FC<MobileMenuProps> = ({ setIsOpen }) => {
                   key={item.id}
                 >
                   <Link
-                    //Stavljen setTimeout da bi se stranica stigla ucitati prije nego se zatvori meni
+                    /**
+                     * @function
+                     * @description This onClick event is used to toggle the state of the menu by calling the setIsOpen function.
+                     * A @setTimeout is used to delay the toggle by 300ms to ensure that the page has fully loaded before the menu is closed.
+                     */
                     onClick={() =>
                       setTimeout(() => {
                         setIsOpen((prev) => !prev);

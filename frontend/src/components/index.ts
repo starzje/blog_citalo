@@ -1,3 +1,23 @@
+/**
+ * Exports a collection of reusable components used across the application.
+ * @module components
+ * @exports {Article} - A component for displaying a blog post article.
+ * @exports {IstaknuteRecenzijeElement} - A component for displaying a featured blog post.
+ * @exports {IstaknuteRecenzije} - A component for displaying a list of featured blog posts.
+ * @exports {SEO} - A component for setting SEO metadata for blog pages.
+ * @exports {Footer} - A component for the website's footer.
+ * @exports {Nav} - A component for the website's navigation.
+ * @exports {Hero} - A component for the homepage's hero section.
+ * @exports {LinkButtons} - A component for displaying custom link buttons.
+ * @exports {SvgBackground} - A component for displaying a background SVG.
+ * @exports {SvgDivider} - A component for displaying a divider SVG.
+ * @exports {Container} - A component for wrapping content in a container.
+ * @exports {PageConnectedLayout} - A component for the layout of connected pages.
+ * @exports {MobileMenu} - A component for the mobile version of the website's navigation.
+ * @exports {RenderedArticles} - A component for displaying a list of rendered blog posts.
+ * @exports {InputSearchBar} - A component for a search bar for blog posts.
+ */
+
 export { default as Article } from '@/components/blog/recenzije/Article';
 export { default as IstaknuteRecenzijeElement } from '@/components/naslovnica/IstaknuteRecenzijeElement';
 export { default as IstaknuteRecenzije } from '@/components/naslovnica/IstaknuteRecenzije';

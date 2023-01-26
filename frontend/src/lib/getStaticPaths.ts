@@ -1,7 +1,12 @@
 import { PostSlugProps } from '@/types';
-import { GET_ALL_SLUGS } from '@/graphql/queries';
+import { GET_ALL_SLUGS } from '../graphql/queries';
 import { client } from './apollo-client';
 
+/**
+ * Retrieves all of the unique slugs for the blog posts from the API and returns them as an array of paths.
+ * @return {Object} - An object containing the array of paths and a fallback flag.
+ * @async
+ */
 export async function getStaticPaths() {
   const { data } = await client.query({
     query: GET_ALL_SLUGS,

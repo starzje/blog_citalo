@@ -30,7 +30,6 @@ const Posts: FC<{ posts: AllPostsProps[] }> = ({ posts }) => {
             pronađeš savršenu knjigu za sebe.
           </p>
         </div>
-
         <InputSearchBar
           posts={posts}
           setSearchTerm={setSearchTerm}

@@ -1,35 +1,34 @@
-export const ENDPOINT =
-  process.env.NEXT_PUBLIC_BASE_URL + '/api/posts?populate=*';
-
+/**
+ * Represents the menu items for the website. Each object in the array contains the properties for a single menu item.
+ * @const {Object[]} MENI - An array of menu items
+ * @property {number} id - The unique identifier for the menu item
+ * @property {string} naslov - The title of the menu item
+ * @property {string} putanja - The URL path of the menu item
+ */
 export const MENI = [
   {
     id: 1,
     naslov: 'Naslovnica',
     putanja: '/',
-    targetSegment: 'naslovnica',
   },
   {
     id: 2,
     naslov: 'O meni',
     putanja: '/o-meni',
-    targetSegment: 'omeni',
   },
   {
     id: 3,
     naslov: 'Recenzije',
     putanja: '/recenzije',
-    targetSegment: 'recenzije',
   },
   {
     id: 4,
     naslov: 'Svaštara',
     putanja: '/svastara',
-    targetSegment: 'svastara',
   },
   {
     id: 5,
     naslov: 'Kontakt',
     putanja: '/kontakt',
-    targetSegment: 'kontakt',
   },
 ];

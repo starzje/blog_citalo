@@ -40,7 +40,7 @@ const Article: FC<{ posts: AllPostsProps }> = ({ posts }) => {
         <div>
           <Link
             href={`recenzije/${posts.attributes.slug}`}
-            className="font-semibold text-dark-brown transition duration-100 hover:text-light-brown active:text-rose-700"
+            className="font-semibold text-dark-brown transition duration-100 hover:text-light-brown active:text-light-brown"
           >
             Pročitaj više...
           </Link>

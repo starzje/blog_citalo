@@ -4,6 +4,12 @@ import React, { FC, useMemo } from 'react';
 import Article from './Article';
 
 const RenderedArticles: FC<ArticleProps> = ({ posts, searchTerm }) => {
+  /**
+   * @function
+   * @param {Object[]} posts - an array of objects representing the posts
+   * @param {string} searchTerm - the term to filter the posts by
+   * @returns {Object[]} - an array of filtered posts that match the search term
+   */
   const filteredPosts = useMemo(
     () => filterPosts(posts, searchTerm),
     [posts, searchTerm]
