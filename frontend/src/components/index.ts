@@ -16,11 +16,12 @@
  * @exports {MobileMenu} - A component for the mobile version of the website's navigation.
  * @exports {RenderedArticles} - A component for displaying a list of rendered blog posts.
  * @exports {InputSearchBar} - A component for a search bar for blog posts.
+ * @exports {StranicaBloga} - A component for the layout of blog pages.
  */
 
-export { default as Article } from '@/components/blog/recenzije/Article';
-export { default as IstaknuteRecenzijeElement } from '@/components/naslovnica/IstaknuteRecenzijeElement';
-export { default as IstaknuteRecenzije } from '@/components/naslovnica/IstaknuteRecenzije';
+export { default as Article } from 'src/components/blog/recenzije/Article';
+export { default as IstaknuteRecenzijeElement } from 'src/components/naslovnica/IstaknuteRecenzijeElement';
+export { default as IstaknuteRecenzije } from 'src/components/naslovnica/IstaknuteRecenzije';
 export { default as SEO } from 'src/components/blog/SEO';
 export { default as Footer } from 'src/components/layout/Footer';
 export { default as Nav } from 'src/components/layout/Nav';
@@ -33,3 +34,4 @@ export { default as PageConnectedLayout } from 'src/components/layout/PageConnec
 export { default as MobileMenu } from 'src/components/layout/MobileMenu';
 export { default as RenderedArticles } from 'src/components/blog/recenzije/RenderedArticles';
 export { default as InputSearchBar } from 'src/components/blog/recenzije/InputSearchBar';
+export { default as StranicaBloga } from 'src/components/blog/recenzije/StranicaBloga';

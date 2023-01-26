@@ -8,16 +8,24 @@ import { client } from './apollo-client';
  * @async
  */
 export async function getStaticPaths() {
-  const { data } = await client.query({
-    query: GET_ALL_SLUGS,
-  });
+  try {
+    const { data } = await client.query({
+      query: GET_ALL_SLUGS,
+    });
 
-  const paths = data.posts.data.map((post: PostSlugProps) => {
-    return { params: { slug: post.attributes.slug } };
-  });
+    const paths = data.posts.data.map((post: PostSlugProps) => {
+      return { params: { slug: post.attributes.slug } };
+    });
 
-  return {
-    paths,
-    fallback: false,
-  };
+    return {
+      paths,
+      fallback: false,
+    };
+  } catch (err) {
+    console.error(err);
+    return {
+      paths: [],
+      fallback: false,
+    };
+  }
 }

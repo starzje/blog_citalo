@@ -3,7 +3,11 @@ import { ArticleProps } from '@/types';
 import React, { FC, useMemo } from 'react';
 import Article from './Article';
 
-const RenderedArticles: FC<ArticleProps> = ({ posts, searchTerm }) => {
+const RenderedArticles: FC<ArticleProps> = ({
+  posts,
+  searchTerm,
+  pathprefix,
+}) => {
   /**
    * @function
    * @param {Object[]} posts - an array of objects representing the posts
@@ -19,6 +23,7 @@ const RenderedArticles: FC<ArticleProps> = ({ posts, searchTerm }) => {
     <>
       {filteredPosts.map((post) => (
         <Article
+          pathprefix={pathprefix}
           key={post.id}
           posts={post}
         />

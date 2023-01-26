@@ -1,4 +1,4 @@
-import { GET_ALL_POSTS } from '@/graphql/queries';
+import { GET_ALL_POSTS_SVASTARA } from '@/graphql/queries';
 import { client } from './apollo-client';
 
 /**
@@ -11,11 +11,11 @@ This function is responsible for fetching all the posts data and returning it as
 export async function getStaticProps() {
   try {
     const { data } = await client.query({
-      query: GET_ALL_POSTS,
+      query: GET_ALL_POSTS_SVASTARA,
     });
     return {
       props: {
-        posts: data.posts.data,
+        posts: data.svastaras.data,
       },
     };
   } catch (err) {

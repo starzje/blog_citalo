@@ -4,11 +4,14 @@ import Link from 'next/link';
 import React from 'react';
 import { FC } from 'react';
 
-const Article: FC<{ posts: AllPostsProps }> = ({ posts }) => {
+const Article: FC<{
+  posts: AllPostsProps;
+  pathprefix: 'recenzije' | 'svastara' | undefined;
+}> = ({ posts, pathprefix = 'svastara' }) => {
   return (
-    <article className="flex flex-col items-center gap-4 md:flex-row lg:gap-6">
+    <article className="flex flex-col items-center gap-4 md:flex-row lg:gap-6 ">
       <Link
-        href={`recenzije/${posts.attributes.slug}`}
+        href={`${pathprefix}/${posts.attributes.slug}`}
         className="group relative block h-56 w-full shrink-0 self-start overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-24 md:w-24 lg:h-40 lg:w-40"
       >
         <Image
@@ -23,12 +26,12 @@ const Article: FC<{ posts: AllPostsProps }> = ({ posts }) => {
           height={500}
         />
       </Link>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 w-full">
         <span className="text-sm text-gray-400">{posts.attributes.datum}</span>
 
         <h2 className="text-xl font-bold text-dark-brown">
           <Link
-            href={`recenzije/${posts.attributes.slug}`}
+            href={`${pathprefix}/${posts.attributes.slug}`}
             className="transition duration-100 hover:text-light-brown active:text-light-brown"
           >
             {posts.attributes.title}
@@ -39,7 +42,7 @@ const Article: FC<{ posts: AllPostsProps }> = ({ posts }) => {
 
         <div>
           <Link
-            href={`recenzije/${posts.attributes.slug}`}
+            href={`${pathprefix}/${posts.attributes.slug}`}
             className="font-semibold text-dark-brown transition duration-100 hover:text-light-brown active:text-light-brown"
           >
             Pročitaj više...

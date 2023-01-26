@@ -1,24 +1,24 @@
 import React from 'react';
-import { getStaticPaths } from '@/lib/getStaticPathsPosts';
-import { getStaticProps } from '@/lib/getStaticPropsIndividualPosts';
+import { getStaticPaths } from '@/lib/getStaticPathsSvastara';
+import { getStaticProps } from '@/lib/getStaticPropsIndividualSvastara';
 import { SinglePostProps } from '@/types';
 import { FC } from 'react';
 import { Container } from 'src/components';
 import PodstranicaBloga from '@/components/blog/recenzije/PodstranicaBloga';
 
-const Post: FC<SinglePostProps> = ({ post }) => {
+const SvastaraPost: FC<SinglePostProps> = ({ post }) => {
   return (
     <Container>
       <PodstranicaBloga
         post={post}
-        pageSeoDescription="Recenzije knjiga koje sam nedavno pročitala i raznovrsne preporuke za čitanje."
-        pageSeoTitle="Čitalo - Recenzija knjige"
+        pageSeoDescription="Blog o svemu i svačemu."
+        pageSeoTitle="Čitalo - Svaštara o svemu i svačemu"
       />
     </Container>
   );
 };
 
-export default Post;
+export default SvastaraPost;
 
 export { getStaticPaths };
 export { getStaticProps };

@@ -18,6 +18,23 @@ const GET_ALL_SLUGS = gql`
 `;
 
 /**
+ * @query GET_ALL_SLUGS_SVASTARA
+ * @desc Get all the slugs of the posts from svastara
+ * @returns {Object} - an object with data property, which contains an array of post objects, where each object has attributes property that contains the slug of the post.
+ */
+const GET_ALL_SLUGS_SVASTARA = gql`
+  query {
+    svastaras {
+      data {
+        attributes {
+          slug
+        }
+      }
+    }
+  }
+`;
+
+/**
  * @query GET_ALL_POSTS
  * @desc Get all the posts
  * @returns {Object} - an object with data property, which contains an array of post objects, where each object has attributes property that contains all the information of the post such as date, title, content, description, category, slug and image.
@@ -25,6 +42,36 @@ const GET_ALL_SLUGS = gql`
 const GET_ALL_POSTS = gql`
   query {
     posts {
+      data {
+        id
+        attributes {
+          datum
+          title
+          content
+          description
+          category
+          slug
+          image {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+
+/**
+ * @query GET_ALL_POSTS_SVASTARA
+ * @desc Get all the posts for svastara
+ * @returns {Object} - an object with data property, which contains an array of post objects, where each object has attributes property that contains all the information of the post such as date, title, content, description, category, slug and image.
+ */
+const GET_ALL_POSTS_SVASTARA = gql`
+  query {
+    svastaras {
       data {
         id
         attributes {
@@ -56,6 +103,36 @@ const GET_ALL_POSTS = gql`
 const GET_INDIVIDUAL_POST = gql`
   query ($slug: String!) {
     posts(filters: { slug: { eq: $slug } }) {
+      data {
+        attributes {
+          datum
+          title
+          content
+          description
+          category
+          slug
+          image {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+
+/**
+ * @query GET_INDIVIDUAL_POST_SVASTARA
+ * @desc Get an individual post by its slug for svastara
+ * @param {String} slug - the slug of the post
+ * @returns {Object} - an object with data property, which contains an array of post objects, where each object has attributes property that contains all the information of the post such as date, title, content, description, category, slug and image.
+ */
+const GET_INDIVIDUAL_POST_SVASTARA = gql`
+  query ($slug: String!) {
+    svastaras(filters: { slug: { eq: $slug } }) {
       data {
         attributes {
           datum
@@ -143,4 +220,7 @@ export {
   GET_ALL_SLUGS,
   GET_ISTAKNUTE_RECENZIJE,
   GET_NEDAVNI_POSTOVI,
+  GET_INDIVIDUAL_POST_SVASTARA,
+  GET_ALL_POSTS_SVASTARA,
+  GET_ALL_SLUGS_SVASTARA,
 };

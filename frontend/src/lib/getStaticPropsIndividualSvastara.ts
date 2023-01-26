@@ -1,4 +1,4 @@
-import { GET_INDIVIDUAL_POST } from '@/graphql/queries';
+import { GET_INDIVIDUAL_POST_SVASTARA } from '@/graphql/queries';
 import { client } from './apollo-client';
 import { serialize } from 'next-mdx-remote/serialize';
 import { SinglePostProps } from '@/types';
@@ -13,11 +13,11 @@ import { SinglePostProps } from '@/types';
 export async function getStaticProps({ params }: { params: { slug: string } }) {
   try {
     const { data } = await client.query({
-      query: GET_INDIVIDUAL_POST,
+      query: GET_INDIVIDUAL_POST_SVASTARA,
       variables: { slug: params.slug },
     });
 
-    const attributes = data.posts.data[0].attributes;
+    const attributes = data.svastaras.data[0].attributes;
     const html = await serialize(attributes.content);
 
     return {

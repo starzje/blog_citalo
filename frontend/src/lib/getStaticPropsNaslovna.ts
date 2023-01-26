@@ -12,15 +12,25 @@ import { client } from './apollo-client';
  * and assigns them to the recenzije and nedavnipostovi props respectively.
  */
 export async function getStaticProps() {
-  const [{ data: data1 }, { data: data2 }] = await Promise.all([
-    client.query({ query: GET_ISTAKNUTE_RECENZIJE }),
-    client.query({ query: GET_NEDAVNI_POSTOVI }),
-  ]);
+  try {
+    const [{ data: data1 }, { data: data2 }] = await Promise.all([
+      client.query({ query: GET_ISTAKNUTE_RECENZIJE }),
+      client.query({ query: GET_NEDAVNI_POSTOVI }),
+    ]);
 
-  return {
-    props: {
-      recenzije: data1.istaknuterecenzijes.data,
-      nedavnipostovi: data2.nedavnipostovis.data,
-    },
-  };
+    return {
+      props: {
+        recenzije: data1.istaknuterecenzijes.data,
+        nedavnipostovi: data2.nedavnipostovis.data,
+      },
+    };
+  } catch (err) {
+    console.error(err);
+    return {
+      props: {
+        recenzije: [],
+        nedavnipostovi: [],
+      },
+    };
+  }
 }

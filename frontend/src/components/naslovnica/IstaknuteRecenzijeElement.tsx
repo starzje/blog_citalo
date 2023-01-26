@@ -8,7 +8,7 @@ const IstaknuteRecenzijeElement: FC<IstaknuteRecenzijeElementProps> = ({
   path,
 }) => {
   return (
-    <article className="h-90  relative col-span-1 m-auto min-h-full cursor-pointer overflow-hidden rounded-lg pb-2 shadow-lg transition-transform duration-200 hover:translate-y-2 border bg-white">
+    <article className="h-90  relative col-span-1 m-auto min-h-full cursor-pointer overflow-hidden rounded-lg pb-6 shadow-lg transition-transform duration-200 hover:translate-y-2 border bg-white">
       <Link
         href={`/${path}/${recenzija.attributes.slug}`}
         className="block h-full w-full"
@@ -45,7 +45,7 @@ const IstaknuteRecenzijeElement: FC<IstaknuteRecenzijeElementProps> = ({
             ))}
           </ul>
         </div>
-        <p className="absolute bottom-0 left-[30%] text-sm text-gray-400">
+        <p className="absolute bottom-2 left-5 text-sm text-gray-400">
           Nakladnik: {recenzija.attributes.nakladnik}
         </p>
       </Link>

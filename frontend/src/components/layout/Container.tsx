@@ -9,7 +9,7 @@ const Container: FC<ContainerProps> = ({ children }) => {
   return (
     <>
       <SvgBackground />
-      <main className="container  mx-auto bg-gray-50 rounded-2xl  min-h-screen shadow-md  ">
+      <main className="container  mx-auto bg-gray-50 rounded-t-2xl min-h-screen shadow-md   ">
         {children}
       </main>
     </>
