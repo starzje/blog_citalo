@@ -7,7 +7,7 @@ import { FC } from 'react';
 const Article: FC<{
   posts: AllPostsProps;
   pathprefix: 'recenzije' | 'svastara' | undefined;
-}> = ({ posts, pathprefix = 'svastara' }) => {
+}> = ({ posts, pathprefix }) => {
   return (
     <article className="flex flex-col items-center gap-4 md:flex-row lg:gap-6 ">
       <Link

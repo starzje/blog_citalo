@@ -2,11 +2,19 @@ import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 import CookieConsent from 'react-cookie-consent';
 import { PageConnectedLayout } from 'src/components';
+import { Poppins } from '@next/font/google';
+
+const poppins = Poppins({
+  subsets: ['latin', 'latin-ext'],
+  preload: true,
+  fallback: ['sans-serif'],
+  weight: ['200', '300', '400', '500', '600', '700', '800'],
+});
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
-    <div className=" bg-stone-200 relative">
-      <div className="max-w-[1100px] min-h-screen   m-auto ">
+    <div className={`${poppins.className} bg-stone-200 relative`}>
+      <div className={`max-w-[1100px] min-h-screen   m-auto `}>
         <PageConnectedLayout>
           <CookieConsent
             location="bottom"

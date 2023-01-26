@@ -5,10 +5,6 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    fontFamily: {
-      sans: ['Poppins', 'sans-serif'],
-    },
-
     extend: {
       backgroundImage: {
         'hero-pattern': "url('/background.jpg')",

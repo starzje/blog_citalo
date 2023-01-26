@@ -75,7 +75,7 @@ const Footer = () => {
           </nav>
         </div>
         <div className="">
-          <div className="mt-4 mb-2 font-medium xl:mb-4 -ml-6 select-none  ">
+          <div className="mt-4 mb-2 font-medium xl:mb-4 -ml-0 md:-ml-6 select-none  ">
             <div className="mt-4 mb-2 font-medium xl:mb-4 select-none">
               Website by:
             </div>
@@ -100,7 +100,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="bg-gray-50">
+      <div className="bg-slate-50">
         <div className="mx-auto flex max-w-screen-xl flex-col gap-y-4 px-4 py-3 text-center text-gray-500 sm:flex-row sm:justify-between sm:text-left">
           <p className="select-none">© 2023 Čitalo | Sva prava pridržana</p>
           <div className="">

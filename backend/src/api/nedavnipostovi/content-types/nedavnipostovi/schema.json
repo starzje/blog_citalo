@@ -25,19 +25,20 @@
       "type": "uid"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "tags": {
       "type": "json"
     },
-    "nakladnik": {
+    "category": {
       "type": "string"
     }
   }

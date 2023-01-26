@@ -43,7 +43,7 @@ const Nav: FC<MobileMenuProps> = ({ isOpen, setIsOpen }) => {
                     router.pathname === item.putanja
                       ? 'bg-dark-brown text-white'
                       : ''
-                  } px-2 py-1 rounded-2xl hover:bg-dark-brown hover:text-white transition duration-300 font-light`}
+                  } px-2 py-1 rounded-2xl hover:bg-dark-brown hover:text-white transition duration-300 font-base`}
                   href={item.putanja}
                 >
                   {item.naslov}

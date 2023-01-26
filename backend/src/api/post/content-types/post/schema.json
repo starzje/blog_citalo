@@ -41,6 +41,12 @@
     },
     "datum": {
       "type": "date"
+    },
+    "quote": {
+      "type": "string"
+    },
+    "brojstranica": {
+      "type": "string"
     }
   }
 }

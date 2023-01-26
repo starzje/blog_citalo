@@ -13,6 +13,7 @@ export async function getStaticProps() {
     const { data } = await client.query({
       query: GET_ALL_POSTS,
     });
+
     return {
       props: {
         posts: data.posts.data,

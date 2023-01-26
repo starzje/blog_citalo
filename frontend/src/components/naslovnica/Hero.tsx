@@ -11,7 +11,7 @@ const Hero = () => {
         <h1 className="text-4xl font-bold leading-tight mb-10 relative text-dark-brown">
           Blog o knjigama
         </h1>
-        <p className="text-base leading-8 tracking-wide mb-5 ">
+        <p className="font-medium leading-8 tracking-wide mb-5 ">
           Ovaj sićušni kutak interneta zamišljen je kao mjesto posvećeno
           knjigama i čitanju. Budući da si ovdje, vjerujem da si i sam(a)
           zaljubljenik u knjige ili imaš barem motivaciju to postati, a ako si
@@ -32,7 +32,7 @@ const Hero = () => {
           />
         </div>
       </div>
-      <div className="w-full md:w-[40%] px-6 py-5  ">
+      <div className="w-full md:w-[40%] px-6 py-5 ">
         <Image
           aria-label="Slika police s knjigama"
           className="w-full  rounded-lg shadow-md"

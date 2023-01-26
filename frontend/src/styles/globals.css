@@ -1,6 +1,9 @@
 @import 'svgDivider.css';
-@import 'font.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.sadrzaj--postova p {
+  padding-top: 1em;
+}

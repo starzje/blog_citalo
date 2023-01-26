@@ -50,6 +50,8 @@ const GET_ALL_POSTS = gql`
           content
           description
           category
+          quote
+          brojstranica
           slug
           image {
             data {
@@ -110,6 +112,8 @@ const GET_INDIVIDUAL_POST = gql`
           content
           description
           category
+          quote
+          brojstranica
           slug
           image {
             data {
@@ -177,7 +181,7 @@ const GET_ISTAKNUTE_RECENZIJE = gql`
             }
           }
           tags
-          nakladnik
+          category
         }
       }
     }
@@ -199,7 +203,7 @@ const GET_NEDAVNI_POSTOVI = gql`
           author
           description
           slug
-          nakladnik
+          category
           tags
           image {
             data {

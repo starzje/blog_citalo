@@ -21,7 +21,7 @@ export default interface IstaknuteRecenzijeProps {
     slug: string;
     image: Image;
     tags: Tags[];
-    nakladnik: string;
+    category: string;
   };
 }
 
@@ -44,7 +44,7 @@ export default interface IstaknuteRecenzijeElementProps {
  * @property {string} attributes.author - The author of the post.
  * @property {string} attributes.description - A short description of the post.
  * @property {string} attributes.slug - A unique string identifier for the post, used in URLs.
- * @property {string} attributes.nakladnik - The publisher of the post.
+ * @property {string} attributes.category - The publisher of the post.
  * @property {Tags[]} attributes.tags - An array of tags associated with the post.
  * @property {Image} attributes.image - An object containing the image associated with the post.
  */
@@ -55,7 +55,7 @@ export default interface NedavniPostoviProps {
     author: string;
     description: string;
     slug: string;
-    nakladnik: string;
+    category: string;
     tags: Tags[];
     image: Image;
   };

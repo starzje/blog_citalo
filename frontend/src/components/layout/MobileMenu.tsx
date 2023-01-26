@@ -6,7 +6,7 @@ import React, { FC } from 'react';
 const MobileMenu: FC<MobileMenuProps> = ({ setIsOpen }) => {
   return (
     <>
-      <div className=" overflow-hidden h-[calc(100vh-85px)]  bg-dark-brown">
+      <div className=" overflow-hidden h-[calc(100vh-85px)] flex justify-center items-center bg-dark-brown">
         <nav>
           <ul className=" items-center space-x-1">
             {MENI.map((item) => {

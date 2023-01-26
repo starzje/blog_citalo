@@ -4,7 +4,9 @@ import React from 'react';
 const index = () => {
   return (
     <Container>
-      Došlo je do greške, molimo vas da se vratite na početnu stranicu.
+      <div className="relative">
+        Došlo je do greške, molimo vas da se vratite na početnu stranicu.
+      </div>
     </Container>
   );
 };

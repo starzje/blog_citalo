@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
-import { IstaknuteRecenzijeElementProps } from '@/types';
 import Link from 'next/link';
 import Image from 'next/image';
+import IstaknuteRecenzijeElementProps from '@/types/naslovnaPost';
 
 const IstaknuteRecenzijeElement: FC<IstaknuteRecenzijeElementProps> = ({
   recenzija,
@@ -46,7 +46,7 @@ const IstaknuteRecenzijeElement: FC<IstaknuteRecenzijeElementProps> = ({
           </ul>
         </div>
         <p className="absolute bottom-2 left-5 text-sm text-gray-400">
-          Nakladnik: {recenzija.attributes.nakladnik}
+          Nakladnik: {recenzija.attributes.category}
         </p>
       </Link>
     </article>

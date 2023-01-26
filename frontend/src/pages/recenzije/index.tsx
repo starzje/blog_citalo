@@ -16,7 +16,7 @@ const Posts: FC<{ posts: AllPostsProps[] }> = ({ posts }) => {
             pronađeš savršenu knjigu za sebe."
         pageSeoDescription="Recenzije knjiga koje sam nedavno pročitala i raznovrsne preporuke za čitanje."
         pageSeoTitle="Čitalo - Recenzije"
-        pathPrefix="svastara"
+        pathPrefix="recenzije"
         posts={posts}
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}

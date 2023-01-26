@@ -23,6 +23,9 @@ export interface SinglePostProps {
       Record<string, string>
     >;
     category: string;
+    quote: string;
+    description: string;
+    brojstranica: string;
     image: string;
   };
 }
