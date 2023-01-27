@@ -37,16 +37,21 @@
     },
     "description": {
       "type": "text",
-      "maxLength": 200
+      "maxLength": 240
     },
     "datum": {
       "type": "date"
     },
-    "quote": {
-      "type": "string"
-    },
     "brojstranica": {
       "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "introduction": {
+      "type": "richtext",
+      "maxLength": 872,
+      "minLength": 500
     }
   }
 }

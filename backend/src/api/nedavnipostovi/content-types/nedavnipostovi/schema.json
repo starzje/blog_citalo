@@ -40,6 +40,10 @@
     },
     "category": {
       "type": "string"
+    },
+    "slugprefix": {
+      "type": "string",
+      "required": true
     }
   }
 }
