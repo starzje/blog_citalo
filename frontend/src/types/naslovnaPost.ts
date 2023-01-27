@@ -6,19 +6,20 @@ import { Image, Tags } from './shared';
  */
 
 /**
- * @interface IstaknuteRecenzijeProps
+ * @interface RecenzijaProps
  * @property {string} id - The unique identifier for the review
  * @property {object} attributes - An object containing the review's attributes
  * @property {string} attributes.title - The title of the review
  * @property
  */
-export default interface IstaknuteRecenzijeProps {
+export interface RecenzijaProps {
   id: string;
   attributes: {
     title: string;
     author: string;
     description: string;
     slug: string;
+    slugprefix?: 'recenzije' | 'svastara' | undefined;
     image: Image;
     tags: Tags[];
     category: string;
@@ -30,9 +31,29 @@ export default interface IstaknuteRecenzijeProps {
  * @property {IstaknuteRecenzijeProps} recenzija - An object that contains the properties of an istaknuta recenzija.
  * @property {'recenzije' | 'svastara'} path - Indicates the path of the current page.
  */
-export default interface IstaknuteRecenzijeElementProps {
-  recenzija: IstaknuteRecenzijeProps;
-  path: 'recenzije' | 'svastara';
+export interface IstaknuteRecenzijeElementProps {
+  recenzija: RecenzijaProps;
+  path: 'recenzije' | 'svastara' | null;
+}
+
+/**
+ * @interface IstaknuteRecenzijeProps
+ * @property {RecenzijaProps[]} recenzije - An array of RecenzijaProps objects
+ * @property {NedavniPostoviProps[]} nedavnipostovi - An array of NedavniPostoviProps objects
+ */
+export interface IstaknuteRecenzijeProps {
+  recenzije: RecenzijaProps[];
+  nedavnipostovi: NedavniPostoviProps[];
+}
+
+/**
+ * @interface NaslovnaProps
+ * @property {RecenzijaProps[]} recenzije - An array of RecenzijaProps objects
+ * @property {NedavniPostoviProps[]} nedavnipostovi - An array of NedavniPostoviProps objects
+ */
+export interface NaslovnaProps {
+  recenzije: RecenzijaProps[];
+  nedavnipostovi: NedavniPostoviProps[];
 }
 
 /**
@@ -48,7 +69,7 @@ export default interface IstaknuteRecenzijeElementProps {
  * @property {Tags[]} attributes.tags - An array of tags associated with the post.
  * @property {Image} attributes.image - An object containing the image associated with the post.
  */
-export default interface NedavniPostoviProps {
+export interface NedavniPostoviProps {
   id: string;
   attributes: {
     title: string;

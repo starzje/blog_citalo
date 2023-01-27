@@ -25,7 +25,6 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
         post: {
           title: attributes.title,
           content: html,
-          category: attributes.category,
           image: attributes.image.data.attributes.url,
         },
       } as SinglePostProps,

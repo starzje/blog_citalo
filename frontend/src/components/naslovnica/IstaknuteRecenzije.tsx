@@ -1,13 +1,8 @@
-import { IstaknuteRecenzijeProps, NedavniPostoviProps } from '@/types';
+import { NaslovnaProps } from '@/types';
 import React, { FC } from 'react';
 import { IstaknuteRecenzijeElement } from 'src/components';
 
-interface IstaknuteRecenzijeInterface {
-  recenzije: IstaknuteRecenzijeProps[];
-  nedavnipostovi: NedavniPostoviProps[];
-}
-
-const IstaknuteRecenzije: FC<IstaknuteRecenzijeInterface> = ({
+const IstaknuteRecenzije: FC<NaslovnaProps> = ({
   recenzije,
   nedavnipostovi,
 }) => {
@@ -22,7 +17,7 @@ const IstaknuteRecenzije: FC<IstaknuteRecenzijeInterface> = ({
             return (
               <IstaknuteRecenzijeElement
                 key={nedavnipost.id}
-                path={'svastara'}
+                path={null}
                 recenzija={nedavnipost}
               />
             );

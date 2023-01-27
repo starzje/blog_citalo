@@ -2,13 +2,7 @@ import React from 'react';
 import { FC } from 'react';
 import { Container, SEO, IstaknuteRecenzije, Hero } from 'src/components';
 import { getStaticProps } from '@/lib/getStaticPropsNaslovna';
-import IstaknuteRecenzijeProps from '@/types/naslovnaPost';
-import NedavniPostoviProps from '@/types/naslovnaPost';
-
-interface NaslovnaProps {
-  recenzije: IstaknuteRecenzijeProps[];
-  nedavnipostovi: NedavniPostoviProps[];
-}
+import { NaslovnaProps } from '@/types';
 
 const Home: FC<NaslovnaProps> = ({ recenzije, nedavnipostovi }) => {
   return (

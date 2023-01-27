@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import IstaknuteRecenzijeElementProps from '@/types/naslovnaPost';
+import { IstaknuteRecenzijeElementProps } from '@/types';
 
 const IstaknuteRecenzijeElement: FC<IstaknuteRecenzijeElementProps> = ({
   recenzija,
@@ -10,7 +10,11 @@ const IstaknuteRecenzijeElement: FC<IstaknuteRecenzijeElementProps> = ({
   return (
     <article className="h-90  relative col-span-1 m-auto min-h-full cursor-pointer overflow-hidden rounded-lg pb-6 shadow-lg transition-transform duration-200 hover:translate-y-2 border bg-white">
       <Link
-        href={`/${path}/${recenzija.attributes.slug}`}
+        href={
+          !recenzija.attributes.slugprefix
+            ? `/${path}/${recenzija.attributes.slug}`
+            : recenzija.attributes.slugprefix + '/' + recenzija.attributes.slug
+        }
         className="block h-full w-full"
       >
         <Image

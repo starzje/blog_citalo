@@ -10,10 +10,7 @@ const Svastara: FC<{ posts: AllPostsProps[] }> = ({ posts }) => {
     <Container>
       <StranicaBloga
         title="Svaštara"
-        description="Što ti Čitalo nudi? Ovdje ćeš pronaći dojmove o knjigama koje sam
-            nedavno pročitala i raznovrsne preporuke za čitanje, a najviše od
-            svega ti želim da u moru blještavih korica i tajanstvenih naslova
-            pronađeš savršenu knjigu za sebe."
+        description="Nećemo se lagati, svi doma imamo barem jednu ladicu u koju guramo one stvari koje ne znamo gdje smjestiti. Svaštara će biti jedna takva ladica, ispunjena preporukama, dojmovima, idejama i prijedlozima. Zajednička nit - knjige."
         pageSeoDescription="Svaštara o svemu i svačemu."
         pageSeoTitle="Čitalo - Svaštara"
         pathPrefix="svastara"

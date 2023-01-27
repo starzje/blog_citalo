@@ -5,7 +5,8 @@ const nextConfig = {
     BASE_URL: process.env.BASE_URL,
   },
   images: {
-    domains: ['localhost:1337', 'localhost', 'via.placeholder.com'],
+    domains: [`${process.env.NEXT_PUBLIC_BASE_URL}`],
+    unoptimized: true,
   },
 };
 

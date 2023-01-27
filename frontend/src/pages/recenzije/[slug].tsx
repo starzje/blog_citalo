@@ -3,8 +3,7 @@ import { getStaticPaths } from '@/lib/getStaticPathsPosts';
 import { getStaticProps } from '@/lib/getStaticPropsIndividualPosts';
 import { SinglePostProps } from '@/types';
 import { FC } from 'react';
-import { Container } from 'src/components';
-import PodstranicaBloga from '@/components/blog/recenzije/PodstranicaBloga';
+import { Container, PodstranicaBloga } from 'src/components';
 
 const Post: FC<SinglePostProps> = ({ post }) => {
   return (

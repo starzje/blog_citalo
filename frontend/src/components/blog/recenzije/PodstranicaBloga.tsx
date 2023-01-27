@@ -16,11 +16,13 @@ const PodstranicaBloga: FC<PodStranicaBlogaProps> = ({
         pageTitle={`${pageSeoTitle}: ${post.title}`}
         pageDescription={pageSeoDescription}
       />
-      <h2 className="text-4xl text-center font-bold leading-tight mb-10 relative text-dark-brown">
-        {post.title}
-      </h2>
+
       <div className=" flex flex-col md:flex-row gap-10 relative px-3 md:px-20 pb-20">
-        <div className="w-full md:w-1/2 ">
+        <h2 className="block md:hidden text-4xl text-center font-bold leading-tight text-dark-brown">
+          {post.title} <br />
+          {post.subtitle && <span>({post.subtitle})</span>}
+        </h2>
+        <div className="w-full my-auto md:w-1/2 ">
           <Image
             className="h-[35em] w-full object-cover border-[15px] rounded-lg  border-light-brown"
             alt={'Fotografija knjige'}
@@ -29,14 +31,20 @@ const PodstranicaBloga: FC<PodStranicaBlogaProps> = ({
             height={500}
           />
         </div>
-        <div className="w-1/2 font-[300] flex flex-col justify-between items-center">
-          <div className="mb-auto pt-10 ">
-            <p>Kategorija: {post.category}</p>
-            <p>broj stranica: {post.brojstranica}</p>
+        <div className="w-full md:w-1/2 font-[300] flex flex-col  items-center">
+          <h2 className="hidden md:block text-4xl text-center font-bold leading-tight  text-dark-brown">
+            {post.title}
+          </h2>
+          <h2 className="hidden md:block text-3xl text-center font-bold leading-tight  text-dark-brown">
+            {post.subtitle && <span>({post.subtitle})</span>}
+          </h2>
+          <div className="text-center text-black/60 py-4 ">
+            <p>Nakladnik: {post.category}</p>
+            <p>Broj stranica: {post.brojstranica}</p>
           </div>
-          <blockquote className="text-xl font-extralight text-center italic my-auto">
-            &bdquo;{post.quote}&ldquo;
-          </blockquote>
+          <div className="hidden md:inline-block  font-light  leading-loose sadrzaj--postova text-justify">
+            <MDXRemote {...post.introduction} />
+          </div>
         </div>
         <SvgDivider
           firstColor="#e7e5e4"
@@ -46,7 +54,10 @@ const PodstranicaBloga: FC<PodStranicaBlogaProps> = ({
         />
       </div>
       <div className="bg-[#e7e5e4] relative px-3 md:px-20 pb-10">
-        <div className="font-extralight  leading-loose sadrzaj--postova">
+        <div className="md:hidden inline-block  font-light  leading-loose sadrzaj--postova text-justify">
+          <MDXRemote {...post.introduction} />
+        </div>
+        <div className="font-light  leading-loose sadrzaj--postova text-justify">
           <MDXRemote {...post.content} />
         </div>
       </div>

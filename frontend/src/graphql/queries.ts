@@ -50,8 +50,9 @@ const GET_ALL_POSTS = gql`
           content
           description
           category
-          quote
+          introduction
           brojstranica
+          subtitle
           slug
           image {
             data {
@@ -81,7 +82,6 @@ const GET_ALL_POSTS_SVASTARA = gql`
           title
           content
           description
-          category
           slug
           image {
             data {
@@ -109,10 +109,11 @@ const GET_INDIVIDUAL_POST = gql`
         attributes {
           datum
           title
+          subtitle
           content
           description
           category
-          quote
+          introduction
           brojstranica
           slug
           image {
@@ -143,7 +144,6 @@ const GET_INDIVIDUAL_POST_SVASTARA = gql`
           title
           content
           description
-          category
           slug
           image {
             data {
@@ -203,6 +203,7 @@ const GET_NEDAVNI_POSTOVI = gql`
           author
           description
           slug
+          slugprefix
           category
           tags
           image {

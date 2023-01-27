@@ -1,15 +1,14 @@
 import React from 'react';
 import { getStaticPaths } from '@/lib/getStaticPathsSvastara';
 import { getStaticProps } from '@/lib/getStaticPropsIndividualSvastara';
-import { SinglePostProps } from '@/types';
+import { SvastaraSinglePostProps } from '@/types';
 import { FC } from 'react';
-import { Container } from 'src/components';
-import PodstranicaBloga from '@/components/blog/recenzije/PodstranicaBloga';
+import { Container, PodstranicaSvastara } from 'src/components';
 
-const SvastaraPost: FC<SinglePostProps> = ({ post }) => {
+const SvastaraPost: FC<SvastaraSinglePostProps> = ({ post }) => {
   return (
     <Container>
-      <PodstranicaBloga
+      <PodstranicaSvastara
         post={post}
         pageSeoDescription="Blog o svemu i svačemu."
         pageSeoTitle="Čitalo - Svaštara o svemu i svačemu"

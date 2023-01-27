@@ -47,7 +47,6 @@ const Footer = () => {
             >
               <FaInstagram /> @citalo_books
             </a>
-            <br />
           </div>
         </div>
         <div className="">

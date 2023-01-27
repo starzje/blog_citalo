@@ -34,13 +34,13 @@ const Hero = () => {
       </div>
       <div className="w-full md:w-[40%] px-6 py-5 ">
         <Image
+          priority={true}
           aria-label="Slika police s knjigama"
           className="w-full  rounded-lg shadow-md"
           src="/background.jpg"
           alt="Polica s knjigama"
           width={500}
           height={500}
-          loading="lazy"
         />
       </div>
       <SvgDivider

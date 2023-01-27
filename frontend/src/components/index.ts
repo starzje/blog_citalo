@@ -17,6 +17,8 @@
  * @exports {RenderedArticles} - A component for displaying a list of rendered blog posts.
  * @exports {InputSearchBar} - A component for a search bar for blog posts.
  * @exports {StranicaBloga} - A component for the layout of blog pages.
+ * @exports {PodstranicaBloga} - A component for the layout of blog post pages.
+ * @exports {PodstranicaSvastara} - A component for the layout of the "Svastara" page.
  */
 
 export { default as Article } from 'src/components/blog/recenzije/Article';
@@ -35,3 +37,5 @@ export { default as MobileMenu } from 'src/components/layout/MobileMenu';
 export { default as RenderedArticles } from 'src/components/blog/recenzije/RenderedArticles';
 export { default as InputSearchBar } from 'src/components/blog/recenzije/InputSearchBar';
 export { default as StranicaBloga } from 'src/components/blog/recenzije/StranicaBloga';
+export { default as PodstranicaBloga } from 'src/components/blog/recenzije/PodstranicaBloga';
+export { default as PodstranicaSvastara } from 'src/components/blog/PodstranicaSvastara';

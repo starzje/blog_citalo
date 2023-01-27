@@ -32,9 +32,12 @@ const Article: FC<{
         <h2 className="text-xl font-bold text-dark-brown">
           <Link
             href={`${pathprefix}/${posts.attributes.slug}`}
-            className="transition duration-100 hover:text-light-brown active:text-light-brown"
+            className="transition duration-100 hover:text-[#776a55] active:text-[#776a55]"
           >
-            {posts.attributes.title}
+            {posts.attributes.title}{' '}
+            {posts.attributes.subtitle
+              ? `- ${posts.attributes.subtitle}`
+              : null}
           </Link>
         </h2>
 
@@ -43,7 +46,7 @@ const Article: FC<{
         <div>
           <Link
             href={`${pathprefix}/${posts.attributes.slug}`}
-            className="font-semibold text-dark-brown transition duration-100 hover:text-light-brown active:text-light-brown"
+            className="font-semibold text-dark-brown transition duration-100 hover:text-[#776a55] active:text-[#776a55]"
           >
             Pročitaj više...
           </Link>

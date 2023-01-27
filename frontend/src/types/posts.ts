@@ -23,9 +23,25 @@ export interface SinglePostProps {
       Record<string, string>
     >;
     category: string;
-    quote: string;
+    introduction: MDXRemoteSerializeResult<
+      Record<string, unknown>,
+      Record<string, string>
+    >;
     description: string;
+    subtitle: string;
     brojstranica: string;
+    image: string;
+  };
+}
+
+export interface SvastaraSinglePostProps {
+  post: {
+    title: string;
+    content: MDXRemoteSerializeResult<
+      Record<string, unknown>,
+      Record<string, string>
+    >;
+    description: string;
     image: string;
   };
 }
@@ -63,6 +79,7 @@ export interface AllPostsProps {
     slug: string;
     category: string;
     image: Image;
+    subtitle?: string;
   };
 }
 
@@ -107,6 +124,11 @@ export interface StranicaBlogaProps {
  * @property {string} pageSeoDescription - The description to be used in the SEO meta tags for the page.
  */
 export interface PodStranicaBlogaProps extends SinglePostProps {
+  pageSeoTitle: string;
+  pageSeoDescription: string;
+}
+
+export interface PodStranicaBlogaSvastaraProps extends SvastaraSinglePostProps {
   pageSeoTitle: string;
   pageSeoDescription: string;
 }

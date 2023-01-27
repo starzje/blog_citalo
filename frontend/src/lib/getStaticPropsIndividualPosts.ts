@@ -19,6 +19,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 
     const attributes = data.posts.data[0].attributes;
     const html = await serialize(attributes.content);
+    const introductionHtml = await serialize(attributes.introduction);
 
     return {
       props: {
@@ -29,7 +30,8 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
           description: attributes.description,
           image: attributes.image.data.attributes.url,
           brojstranica: attributes.brojstranica,
-          quote: attributes.quote,
+          subtitle: attributes.subtitle,
+          introduction: introductionHtml,
         },
       } as SinglePostProps,
     };

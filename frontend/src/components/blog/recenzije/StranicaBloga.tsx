@@ -1,4 +1,5 @@
 import { StranicaBlogaProps } from '@/types';
+import Link from 'next/link';
 import React from 'react';
 import { SEO, InputSearchBar, RenderedArticles } from 'src/components';
 
@@ -33,13 +34,27 @@ const StranicaBloga: React.FC<StranicaBlogaProps> = ({
           setSearchTerm={setSearchTerm}
           searchTerm={searchTerm}
         />
-        <div className="grid gap-8 sm:grid-cols-2 sm:gap-12 lg:grid-cols-2 xl:grid-cols-2 xl:gap-16">
-          <RenderedArticles
-            pathprefix={pathPrefix}
-            posts={posts}
-            searchTerm={searchTerm}
-          />
-        </div>
+        {posts.length !== 0 ? (
+          <div className="grid gap-8 sm:grid-cols-2 sm:gap-12 lg:grid-cols-2 xl:grid-cols-2 xl:gap-16">
+            <RenderedArticles
+              pathprefix={pathPrefix}
+              posts={posts}
+              searchTerm={searchTerm}
+            />
+          </div>
+        ) : (
+          <div className="text-center text-gray-500 md:text-lg">
+            Ups! Ova stranica je (za sad) prazna. <br />
+            <br />
+            Vrati se na početnu stranicu: <br />
+            <Link
+              className="text-dark-brown font-bold hover:text-[#776a55]"
+              href="/"
+            >
+              Naslovnica
+            </Link>
+          </div>
+        )}
       </div>
     </>
   );
