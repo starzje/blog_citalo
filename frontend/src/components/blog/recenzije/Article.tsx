@@ -26,7 +26,7 @@ const Article: FC<{
           height={500}
         />
       </Link>
-      <div className="flex flex-col gap-2 w-full">
+      <div className="flex flex-col gap-2 w-full mb-auto">
         <span className="text-sm text-gray-400">{posts.attributes.datum}</span>
 
         <h2 className="text-xl font-bold text-dark-brown">

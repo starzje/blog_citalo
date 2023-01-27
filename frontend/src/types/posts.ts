@@ -83,6 +83,17 @@ export interface AllPostsProps {
   };
 }
 
+/**
+ * @interface AllSvastaraProps
+ * @property {string} id - The unique identifier for the post
+ * @property {object} attributes - An object containing the post's attributes
+ * @property {string} attributes.title - The title of the post
+ * @property {string} attributes.datum - The date the post was published
+ * @property {string} attributes.content - The content of the post
+ * @property {string} attributes.description - The post's description
+ * @property {string} attributes.slug - The unique identifier for the post
+ * @property {Image} attributes.image - The featured image of the post
+ */
 export interface AllSvastaraProps {
   id: string;
   attributes: {
@@ -140,6 +151,11 @@ export interface PodStranicaBlogaProps extends SinglePostProps {
   pageSeoDescription: string;
 }
 
+/**
+ * @interface PodStranicaBlogaSvastaraProps
+ * @property {string} pageSeoTitle - The title to be used in the SEO meta tags for the page.
+ * @property {string} pageSeoDescription - The description to be used in the SEO meta tags for the page.
+ */
 export interface PodStranicaBlogaSvastaraProps extends SvastaraSinglePostProps {
   pageSeoTitle: string;
   pageSeoDescription: string;

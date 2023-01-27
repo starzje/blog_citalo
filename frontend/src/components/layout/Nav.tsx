@@ -30,8 +30,10 @@ const Nav: FC<MobileMenuProps> = ({ isOpen, setIsOpen }) => {
         />
       </Link>
       <p className="hidden md:inline-block border font-light text-dark-brown border-black p-2 rounded-2xl">
-        Trenutno čitam:{' '}
-        <span className=" text-dark-brown">Stephen King - Isijavanje</span>
+        Danas čitam:{' '}
+        <span className=" text-dark-brown">
+          Lažljivi život odraslih - E. Ferrante{' '}
+        </span>
       </p>
       <nav>
         <ul className="hidden md:flex items-center space-x-1">

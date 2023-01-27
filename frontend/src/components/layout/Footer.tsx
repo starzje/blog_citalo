@@ -24,10 +24,7 @@ const Footer = () => {
               />
             </Link>
           </div>
-          <div className="text-gray-500">
-            Blog za recenziranje knjiga i svih ostalih stvari u mom svakodnevnom
-            životu!
-          </div>
+          <div className="text-gray-500">Danas čitam.</div>
         </div>
         <div className="">
           <div className="mt-4 mb-2 font-medium xl:mb-4 select-none">

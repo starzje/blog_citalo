@@ -9,7 +9,11 @@ const Hero = () => {
     <section className=" flex flex-wrap items-center justify-between pb-10  relative  ">
       <div className="w-full md:w-1/2 px-7 md:text-left text-center md:mt-0 mt-10 ">
         <h1 className="text-4xl font-bold leading-tight mb-10 relative text-dark-brown">
-          Blog o knjigama
+          Čitalo - Danas čitam.
+          <br />
+          <span className="text-3xl font-normal text-black/70">
+            Blog o knjigama
+          </span>
         </h1>
         <p className="font-medium leading-8 tracking-wide mb-5 ">
           Ovaj sićušni kutak interneta zamišljen je kao mjesto posvećeno
