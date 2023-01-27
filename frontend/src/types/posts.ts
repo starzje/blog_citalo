@@ -83,6 +83,18 @@ export interface AllPostsProps {
   };
 }
 
+export interface AllSvastaraProps {
+  id: string;
+  attributes: {
+    title: string;
+    datum: string;
+    content: string;
+    description: string;
+    slug: string;
+    image: Image;
+  };
+}
+
 /**
  * @interface ArticleProps
  * @property {AllPostsProps[]} posts - An array of objects that contain the properties of all posts.

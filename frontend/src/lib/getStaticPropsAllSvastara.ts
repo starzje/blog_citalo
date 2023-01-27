@@ -1,4 +1,5 @@
 import { GET_ALL_POSTS_SVASTARA } from '@/graphql/queries';
+import { AllSvastaraProps } from '@/types';
 import { client } from './apollo-client';
 
 /**
@@ -13,9 +14,20 @@ export async function getStaticProps() {
     const { data } = await client.query({
       query: GET_ALL_POSTS_SVASTARA,
     });
+
+    // Sort the data by date property
+    const sortedPosts = [...data.svastaras.data].sort(
+      (a: AllSvastaraProps, b: AllSvastaraProps) => {
+        return (
+          new Date(b.attributes.datum).getTime() -
+          new Date(a.attributes.datum).getTime()
+        );
+      }
+    );
+
     return {
       props: {
-        posts: data.svastaras.data,
+        posts: sortedPosts,
       },
     };
   } catch (err) {

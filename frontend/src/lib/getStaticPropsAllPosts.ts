@@ -1,4 +1,5 @@
 import { GET_ALL_POSTS } from '@/graphql/queries';
+import { AllPostsProps } from '@/types';
 import { client } from './apollo-client';
 
 /**
@@ -14,9 +15,19 @@ export async function getStaticProps() {
       query: GET_ALL_POSTS,
     });
 
+    // Sort the data by date property
+    const sortedPosts = [...data.posts.data].sort(
+      (a: AllPostsProps, b: AllPostsProps) => {
+        return (
+          new Date(b.attributes.datum).getTime() -
+          new Date(a.attributes.datum).getTime()
+        );
+      }
+    );
+
     return {
       props: {
-        posts: data.posts.data,
+        posts: sortedPosts,
       },
     };
   } catch (err) {

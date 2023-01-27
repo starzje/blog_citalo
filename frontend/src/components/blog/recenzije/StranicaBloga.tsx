@@ -19,7 +19,7 @@ const StranicaBloga: React.FC<StranicaBlogaProps> = ({
         pageTitle={pageSeoTitle}
         pageDescription={pageSeoDescription}
       />
-      <div className="mx-auto max-w-screen-xl px-4 md:px-8 relative py-20">
+      <div className="mx-auto max-w-screen-xl px-4 md:px-8 relative pt-10 pb-20">
         <div className="mb-10 md:mb-16">
           <h2 className="text-4xl text-center font-bold leading-tight mb-10 relative text-dark-brown">
             {title}

@@ -1,6 +1,6 @@
 import { filterPosts } from '@/lib/filterPosts';
 import { ArticleProps } from '@/types';
-import React, { FC, useMemo } from 'react';
+import React, { FC } from 'react';
 import Article from './Article';
 
 const RenderedArticles: FC<ArticleProps> = ({
@@ -8,27 +8,19 @@ const RenderedArticles: FC<ArticleProps> = ({
   searchTerm,
   pathprefix,
 }) => {
-  /**
-   * @function
-   * @param {Object[]} posts - an array of objects representing the posts
-   * @param {string} searchTerm - the term to filter the posts by
-   * @returns {Object[]} - an array of filtered posts that match the search term
-   */
-  const filteredPosts = useMemo(
-    () => filterPosts(posts, searchTerm),
-    [posts, searchTerm]
-  );
+  // Filters the posts based on the search term
+  const filteredPosts = filterPosts(posts, searchTerm);
 
   return (
-    <>
+    <React.Fragment>
       {filteredPosts.map((post) => (
         <Article
-          pathprefix={pathprefix}
           key={post.id}
+          pathprefix={pathprefix}
           posts={post}
         />
       ))}
-    </>
+    </React.Fragment>
   );
 };
 
