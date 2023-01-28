@@ -52,6 +52,9 @@
       "type": "richtext",
       "maxLength": 872,
       "minLength": 500
+    },
+    "translation": {
+      "type": "string"
     }
   }
 }
