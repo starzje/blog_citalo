@@ -32,6 +32,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
           brojstranica: attributes.brojstranica,
           subtitle: attributes.subtitle,
           introduction: introductionHtml,
+          translation: attributes.translation,
         },
       } as SinglePostProps,
     };

@@ -53,6 +53,7 @@ const GET_ALL_POSTS = gql`
           introduction
           brojstranica
           subtitle
+          translation
           slug
           image {
             data {
@@ -113,6 +114,7 @@ const GET_INDIVIDUAL_POST = gql`
           content
           description
           category
+          translation
           introduction
           brojstranica
           slug

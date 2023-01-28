@@ -31,6 +31,7 @@ export interface SinglePostProps {
     subtitle: string;
     brojstranica: string;
     image: string;
+    translation: string;
   };
 }
 

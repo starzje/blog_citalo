@@ -40,6 +40,8 @@ const PodstranicaBloga: FC<PodStranicaBlogaProps> = ({
           </h2>
           <div className="text-center text-black/60 py-4 ">
             <p>Nakladnik: {post.category}</p>
+            {post.translation && <p>Prijevod: {post.translation}</p>}
+
             <p>Broj stranica: {post.brojstranica}</p>
           </div>
           <div className="hidden md:inline-block  font-light  leading-loose sadrzaj--postova text-justify">
