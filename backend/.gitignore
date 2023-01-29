@@ -106,7 +106,7 @@ coverage
 # Strapi
 ############################
 
-##env files
+##env files all
 .env.production 
 .env.development
 .env.production
