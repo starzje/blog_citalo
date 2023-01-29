@@ -10,7 +10,7 @@ const kontakt: FC = () => {
         pageTitle="Čitalo - Kontakt"
         pageDescription="Ovdje me možete kontaktirati za sve što vas zanima."
       />
-      <div className="relative pt-10 px-20 leading-loose">
+      <div className="relative pt-10 px-4 md:px-20 leading-loose">
         <h2 className="text-4xl text-center font-bold leading-tight text-dark-brown">
           Dragi posjetitelju...
         </h2>
