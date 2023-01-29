@@ -4,7 +4,7 @@ import React from 'react';
 const index = () => {
   return (
     <Container>
-      <div className="px-20 py-10 relative">
+      <div className="px-5 md:px-20 py-10 relative">
         <h4 className="text-xl font-semibold pb-2">Dragi korisniče,</h4>
         <p className="font-light text-justify]">
           Vaša privatnost nam je važna, stoga ovim uvjetima uređujemo način
