@@ -4,7 +4,7 @@ Citalo books is a blog web application that uses Next.js on the frontend and str
 
 #### live link: https://citalo-books.com/
 
-![mockup of the app](https://i.ibb.co/TRGvvN3/mockup-citalo.jpg)
+![mockup of the app](https://i.ibb.co/cFKq0PV/mockup-citalo-min.jpg)
 
 ## Built With
 
