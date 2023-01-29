@@ -23,10 +23,7 @@ const IstaknuteRecenzijeElement: FC<IstaknuteRecenzijeElementProps> = ({
           alt="featured image"
           width={500}
           height={500}
-          src={
-            process.env.NEXT_PUBLIC_BASE_URL +
-            recenzija.attributes.image.data.attributes.url
-          }
+          src={recenzija.attributes.image.data.attributes.url}
         />
         <div className="w-full p-4">
           <p className="text-md font-medium text-dark-brown">

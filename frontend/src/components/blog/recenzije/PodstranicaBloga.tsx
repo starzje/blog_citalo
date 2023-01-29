@@ -26,7 +26,7 @@ const PodstranicaBloga: FC<PodStranicaBlogaProps> = ({
           <Image
             className="h-[35em] w-full object-cover border-[15px] rounded-lg  border-light-brown"
             alt={'Fotografija knjige'}
-            src={(process.env.NEXT_PUBLIC_BASE_URL + post.image) as string}
+            src={post.image}
             width={500}
             height={500}
           />

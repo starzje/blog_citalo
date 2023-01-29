@@ -15,10 +15,7 @@ const Article: FC<{
         className="group relative block h-56 w-full shrink-0 self-start overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-24 md:w-24 lg:h-40 lg:w-40"
       >
         <Image
-          src={
-            process.env.NEXT_PUBLIC_BASE_URL +
-            posts.attributes.image.data.attributes.url
-          }
+          src={posts.attributes.image.data.attributes.url}
           loading="lazy"
           alt="preview image za recenziju"
           className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"

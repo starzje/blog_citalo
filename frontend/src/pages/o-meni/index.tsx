@@ -33,7 +33,7 @@ const OMeni: FC = () => {
           </h2>
           <p className="  font-light  leading-loose  pt-0 md:pt-5  text-justify">
             Jedna Tamara sa zagrebačkom adresom, zaljubljena u knjige. Tamara
-            koja je 13.01.2021. godine imala viška vremena za pisanje dojmova o
+            koja je 13.01.2022. godine imala viška vremena za pisanje dojmova o
             pročitanim knjigama, pa ih je odlučila sačuvati i podijeliti s
             drugima stvorivši Instagram profil - Čitalo. Danas ta ista Tamara
             nema baš toliko vremena viška, ali je motivacija za dijeljenjem
