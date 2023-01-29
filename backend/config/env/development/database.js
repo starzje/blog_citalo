@@ -1,25 +1,16 @@
-// import path from 'path';
+import path from "path";
 
-// export default ({ env }) => ({
-//   connection: {
-//     client: 'sqlite',
-//     connection: {
-//       filename: path.join(__dirname, '..', '..', env('DATABASE_FILENAME', '.tmp/data.db')),
-//     },
-//     useNullAsDefault: true,
-//   },
-// });
-
-module.exports = ({ env }) => ({
+export default ({ env }) => ({
   connection: {
-    client: "postgres",
+    client: "sqlite",
     connection: {
-      host: env("PGHOST"),
-      port: env.int("PGPORT"),
-      database: env("PGDATABASE"),
-      user: env("PGUSER"),
-      password: env("PGPASSWORD"),
-      ssl: env.bool(true),
+      filename: path.join(
+        __dirname,
+        "..",
+        "..",
+        env("DATABASE_FILENAME", ".tmp/data.db")
+      ),
     },
+    useNullAsDefault: true,
   },
 });
