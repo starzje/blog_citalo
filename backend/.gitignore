@@ -111,7 +111,6 @@ coverage
 .env.production
 .env
 .envc
-license.txt
 exports
 *.cache
 dist
