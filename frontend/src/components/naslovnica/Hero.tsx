@@ -17,10 +17,9 @@ const Hero = () => {
         </h1>
         <p className="font-medium leading-8 tracking-wide mb-5 ">
           Ovaj sićušni kutak interneta zamišljen je kao mjesto posvećeno
-          knjigama i čitanju. Budući da si ovdje, vjerujem da si i sam(a)
-          zaljubljenik u knjige ili imaš barem motivaciju to postati, a ako si
-          tu pak zalutao ili zalutala slučajno - sigurna sam da je baš to bila
-          sudbina.
+          knjigama. Budući da si ovdje vjerujem da si i sam(a) zaljubljenik u
+          knjige ili barem imaš motivaciju to postati, a ako si tu pak zalutao
+          ili zalutala slučajno - možda je baš to bila sudbina.
         </p>
         <div className="w-full justify-center text-center gap-2 pr-2 flex md:flex-row flex-col">
           <LinkButtons

@@ -80,7 +80,7 @@ const InputSearchBar: FC<ArticleProps> = ({
                   }}
                 >
                   <span className="m-0 font-medium">
-                    {post.attributes.title}
+                    {post.attributes.title} - {post.attributes.subtitle}
                   </span>
                 </div>
               );

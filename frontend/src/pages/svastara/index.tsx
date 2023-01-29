@@ -10,7 +10,7 @@ const Svastara: FC<{ posts: AllPostsProps[] }> = ({ posts }) => {
     <Container>
       <StranicaBloga
         title="Svaštara"
-        description="Nećemo se lagati, svi doma imamo barem jednu ladicu u koju guramo one stvari koje ne znamo gdje smjestiti. Svaštara će biti jedna takva ladica, ispunjena preporukama, dojmovima, idejama i prijedlozima. Zajednička nit - knjige."
+        description="Nećemo se lagati, svi doma imamo barem jednu ladicu u koju trpamo stvari koje ne znamo gdje smjestiti. Svaštara će biti jedna takva ladica, ispunjena raznoraznim knjiškim preporukama, dojmovima, idejama i prijedlozima. Please, excuse the mess!"
         pageSeoDescription="Svaštara o svemu i svačemu."
         pageSeoTitle="Čitalo - Svaštara"
         pathPrefix="svastara"
