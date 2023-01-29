@@ -11,7 +11,7 @@ const Hero = () => {
         <h1 className="text-4xl font-bold leading-tight mb-10 relative text-dark-brown">
           Čitalo - Danas čitam.
           <br />
-          <span className="text-3xl font-normal text-black/70">
+          <span className="text-[1.6rem] md:text-3xl font-normal text-black/70">
             Blog o knjigama
           </span>
         </h1>

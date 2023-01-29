@@ -10,7 +10,7 @@ const Posts: FC<{ posts: AllPostsProps[] }> = ({ posts }) => {
     <Container>
       <StranicaBloga
         title="Knjiški osvrti"
-        description="Što ti Čitalo nudi? Ovdje ćeš pronaći dojmove nedavno pročitanim knjigama, a najviše od svega ti želim da u moru blještavih korica i tajanstvenih naslova pronađeš savršenu knjigu za sebe."
+        description="Što ti Čitalo nudi? Ovdje ćeš pronaći dojmove o nedavno pročitanim knjigama, a najviše od svega ti želim da u moru blještavih korica i tajanstvenih naslova pronađeš savršenu knjigu za sebe."
         pageSeoDescription="Recenzije knjiga koje sam nedavno pročitala i raznovrsne preporuke za čitanje."
         pageSeoTitle="Čitalo - Recenzije"
         pathPrefix="recenzije"
