@@ -8,11 +8,11 @@ const MobileMenu: FC<MobileMenuProps> = ({ setIsOpen }) => {
     <>
       <div className=" overflow-hidden h-[calc(100vh-85px)] flex justify-center items-center bg-dark-brown">
         <nav className="w-full">
-          <ul className=" items-center space-x-1">
+          <ul className="-mt-[85px] items-center ">
             {MENI.map((item) => {
               return (
                 <li
-                  className="mt-4  w-full "
+                  className="mt-4 w-full "
                   key={item.id}
                 >
                   <Link
@@ -26,7 +26,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ setIsOpen }) => {
                         setIsOpen((prev) => !prev);
                       }, 300)
                     }
-                    className="py-4 block text-center text-xl text-white rounded-md hover:bg-light-brown hover:text-dark-brown font-light transition duration-300"
+                    className="py-4   w-full block text-center text-xl text-white rounded-md hover:bg-light-brown hover:text-dark-brown font-light transition duration-300 "
                     href={item.putanja}
                   >
                     {item.naslov}
