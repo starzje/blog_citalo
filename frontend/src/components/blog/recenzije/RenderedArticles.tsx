@@ -1,4 +1,4 @@
-import { filterPosts } from '@/lib/filterPosts';
+import { filterPosts } from '@/utils/filterPosts';
 import { ArticleProps } from '@/types';
 import React, { FC } from 'react';
 import Article from './Article';

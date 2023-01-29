@@ -1,6 +1,6 @@
 import { useCallback, useMemo, FC } from 'react';
 import { ArticleProps } from '@/types';
-import { filterPostsInput } from '@/lib/filterPosts';
+import { filterPostsInput } from '@/utils/filterPosts';
 
 const InputSearchBar: FC<ArticleProps> = ({
   posts,
