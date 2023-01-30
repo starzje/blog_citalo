@@ -7,7 +7,7 @@ import { gql } from '@apollo/client';
  */
 const GET_ALL_SLUGS = gql`
   query {
-    posts {
+    posts(pagination: { limit: 200 }) {
       data {
         attributes {
           slug
@@ -24,7 +24,7 @@ const GET_ALL_SLUGS = gql`
  */
 const GET_ALL_SLUGS_SVASTARA = gql`
   query {
-    svastaras {
+    svastaras(pagination: { limit: 200 }) {
       data {
         attributes {
           slug
@@ -41,7 +41,7 @@ const GET_ALL_SLUGS_SVASTARA = gql`
  */
 const GET_ALL_POSTS = gql`
   query {
-    posts {
+    posts(pagination: { limit: 200 }) {
       data {
         id
         attributes {
@@ -75,7 +75,7 @@ const GET_ALL_POSTS = gql`
  */
 const GET_ALL_POSTS_SVASTARA = gql`
   query {
-    svastaras {
+    svastaras(pagination: { limit: 200 }) {
       data {
         id
         attributes {
@@ -105,7 +105,7 @@ const GET_ALL_POSTS_SVASTARA = gql`
  */
 const GET_INDIVIDUAL_POST = gql`
   query ($slug: String!) {
-    posts(filters: { slug: { eq: $slug } }) {
+    posts(filters: { slug: { eq: $slug } }, pagination: { limit: 200 }) {
       data {
         attributes {
           datum
@@ -139,7 +139,7 @@ const GET_INDIVIDUAL_POST = gql`
  */
 const GET_INDIVIDUAL_POST_SVASTARA = gql`
   query ($slug: String!) {
-    svastaras(filters: { slug: { eq: $slug } }) {
+    svastaras(filters: { slug: { eq: $slug } }, pagination: { limit: 200 }) {
       data {
         attributes {
           datum
@@ -167,7 +167,7 @@ const GET_INDIVIDUAL_POST_SVASTARA = gql`
  */
 const GET_ISTAKNUTE_RECENZIJE = gql`
   query {
-    istaknuterecenzijes {
+    istaknuterecenzijes(pagination: { limit: 200 }) {
       data {
         id
         attributes {
@@ -197,7 +197,7 @@ const GET_ISTAKNUTE_RECENZIJE = gql`
  */
 const GET_NEDAVNI_POSTOVI = gql`
   query {
-    nedavnipostovis {
+    nedavnipostovis(pagination: { limit: 200 }) {
       data {
         id
         attributes {
