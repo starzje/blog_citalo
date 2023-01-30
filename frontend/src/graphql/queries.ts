@@ -167,7 +167,7 @@ const GET_INDIVIDUAL_POST_SVASTARA = gql`
  */
 const GET_ISTAKNUTE_RECENZIJE = gql`
   query {
-    istaknuterecenzijes(pagination: { limit: 200 }) {
+    istaknuterecenzijes(pagination: { limit: 200 }, sort: "updatedAt:desc") {
       data {
         id
         attributes {
@@ -175,6 +175,7 @@ const GET_ISTAKNUTE_RECENZIJE = gql`
           author
           description
           slug
+          updatedAt
           image {
             data {
               attributes {
@@ -197,7 +198,7 @@ const GET_ISTAKNUTE_RECENZIJE = gql`
  */
 const GET_NEDAVNI_POSTOVI = gql`
   query {
-    nedavnipostovis(pagination: { limit: 200 }) {
+    nedavnipostovis(pagination: { limit: 200 }, sort: "updatedAt:desc") {
       data {
         id
         attributes {
@@ -205,6 +206,7 @@ const GET_NEDAVNI_POSTOVI = gql`
           author
           description
           slug
+          updatedAt
           slugprefix
           category
           tags
