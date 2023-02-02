@@ -47,7 +47,8 @@ const IstaknuteRecenzijeElement: FC<IstaknuteRecenzijeElementProps> = ({
           </ul>
         </div>
         <p className="absolute bottom-2 left-5 text-sm text-gray-400">
-          Nakladnik: {recenzija.attributes.category}
+          {recenzija.attributes.category &&
+            `Nakladnik: ${recenzija.attributes.category}`}
         </p>
       </Link>
     </article>
