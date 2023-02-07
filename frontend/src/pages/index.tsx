@@ -8,8 +8,8 @@ const Home: FC<NaslovnaProps> = ({ recenzije, nedavnipostovi }) => {
   return (
     <Container>
       <SEO
-        pageTitle="Čitalo Books"
-        pageDescription="Blog o knjigama i čitanju, te recenziji knjiga"
+        pageTitle="Čitalo"
+        pageDescription="Blog o knjigama. Preporuke za čitanje."
       />
 
       <Hero />

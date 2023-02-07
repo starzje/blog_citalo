@@ -86,12 +86,6 @@ const Footer = () => {
               >
                 www.ivan-starcevic.com
               </a>
-              <a
-                href="mailto:contact@ivan-starcevic.com"
-                className=" items-center hover:text-dark-brown transition duration-300  font-light"
-              >
-                contact@ivan-starcevic.com
-              </a>
             </div>
           </div>
         </div>
