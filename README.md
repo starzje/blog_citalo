@@ -1,6 +1,6 @@
 # Čitalo books
 
-Citalo books is a blog web application that uses Next.js on the frontend and strapi (headless cms) on the backend.
+Citalo books is a blog web application that uses Next.js on the frontend and strapi (headless cms) on the backend..
 
 #### live link: https://citalo-books.com/
 
