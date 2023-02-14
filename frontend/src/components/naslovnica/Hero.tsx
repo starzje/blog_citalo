@@ -39,7 +39,7 @@ const Hero = () => {
         <Image
           priority={true}
           aria-label="Slika police s knjigama"
-          className="w-full  rounded-lg shadow-md"
+          className="w-full "
           src="/background.jpg"
           alt="Polica s knjigama"
           width={500}
