@@ -6,8 +6,8 @@ const index = () => {
   return (
     <Container>
       <div className="relative">
-        <div className="mx-auto max-w-screen-xl px-4 md:px-8 relative py-20">
-          <div className="mb-10 md:mb-16">
+        <div className="mx-auto max-w-screen-xl px-4 lg:px-8 relative py-20">
+          <div className="mb-10 lg:mb-16">
             <h4 className="text-4xl text-center font-bold leading-tight mb-10 relative text-black">
               404 ERROR :/
             </h4>

@@ -7,11 +7,11 @@ import { LinkButtons, SvgDivider } from 'src/components';
 const Hero = () => {
   return (
     <section className=" flex flex-wrap items-center justify-between pb-10  relative  ">
-      <div className="w-full md:w-1/2 px-7 md:text-left text-center md:mt-0 mt-10 ">
+      <div className="w-full lg:w-1/2 px-7 lg:text-left text-center lg:mt-0 mt-10 ">
         <h1 className="text-4xl font-bold leading-tight mb-10 relative text-dark-brown">
           Čitalo - Danas čitam.
           <br />
-          <span className="text-[1.6rem] md:text-3xl font-normal text-black/70">
+          <span className="text-[1.6rem] lg:text-3xl font-normal text-black/70">
             Blog o knjigama
           </span>
         </h1>
@@ -21,7 +21,7 @@ const Hero = () => {
           knjige ili barem imaš motivaciju to postati, a ako si tu pak zalutao
           ili zalutala slučajno - možda je baš to bila sudbina.
         </p>
-        <div className="w-full justify-center text-center gap-2 pr-2 flex md:flex-row flex-col">
+        <div className="w-full justify-center text-center gap-2 pr-2 flex lg:flex-row flex-col">
           <LinkButtons
             link="/recenzije"
             label="Pronađi knjigu za sebe"
@@ -35,7 +35,7 @@ const Hero = () => {
           />
         </div>
       </div>
-      <div className="w-full md:w-[40%] px-6 py-5 ">
+      <div className="w-full lg:w-[40%] px-6 py-5 ">
         <Image
           priority={true}
           aria-label="Slika police s knjigama"

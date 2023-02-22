@@ -9,10 +9,10 @@ const Article: FC<{
   pathprefix: 'recenzije' | 'svastara' | undefined;
 }> = ({ posts, pathprefix }) => {
   return (
-    <article className="flex flex-col items-center gap-4 md:flex-row lg:gap-6 ">
+    <article className="flex flex-col items-center gap-4 lg:flex-row lg:gap-6 ">
       <Link
         href={`${pathprefix}/${posts.attributes.slug}`}
-        className="group relative block h-56 w-full shrink-0 self-start overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-24 md:w-24 lg:h-40 lg:w-40"
+        className="group relative block h-56 w-full shrink-0 self-start overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:h-24 lg:w-24 lg:h-40 lg:w-40"
       >
         <Image
           src={posts.attributes.image.data.attributes.url}

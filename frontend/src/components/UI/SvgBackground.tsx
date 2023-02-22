@@ -3,7 +3,7 @@ import React from 'react';
 const SvgBackground = () => {
   return (
     <svg
-      className="inline-block left-0  fixed fill-current w-auto h-auto md:mt-0 mt-16 text-[#ffffff5d]"
+      className="inline-block left-0  fixed fill-current w-auto h-auto lg:mt-0 mt-16 text-[#ffffff5d]"
       viewBox="0 0 1440 450"
       xmlns="http://www.w3.org/2000/svg"
     >

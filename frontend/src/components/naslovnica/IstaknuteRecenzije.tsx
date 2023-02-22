@@ -12,7 +12,7 @@ const IstaknuteRecenzije: FC<NaslovnaProps> = ({
         Nedavne objave
       </h2>
       <div className="py-8 ">
-        <div className="mx-auto grid max-w-screen-lg grid-cols-1 gap-5 p-5 sm:grid-cols-2 md:grid-cols-3 lg:gap-10">
+        <div className="mx-auto grid max-w-screen-lg grid-cols-1 gap-5 p-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
           {nedavnipostovi?.map((nedavnipost) => {
             return (
               <IstaknuteRecenzijeElement
@@ -28,7 +28,7 @@ const IstaknuteRecenzije: FC<NaslovnaProps> = ({
         Istaknute objave
       </h2>
       <div className="py-8 ">
-        <div className="mx-auto grid max-w-screen-lg grid-cols-1 gap-5 p-5 sm:grid-cols-2 md:grid-cols-3 lg:gap-10">
+        <div className="mx-auto grid max-w-screen-lg grid-cols-1 gap-5 p-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
           {recenzije?.map((recenzija) => {
             return (
               <IstaknuteRecenzijeElement

@@ -10,11 +10,11 @@ const OMeni: FC = () => {
         pageTitle="Čitalo - O meni"
         pageDescription="Ovdje me možete upoznati malo bolje."
       />
-      <div className=" flex flex-col md:flex-row gap-10 relative px-3 py-10 md:px-20 ">
-        <h2 className="inline-block md:hidden text-4xl text-center font-bold leading-tight text-dark-brown">
+      <div className=" flex flex-col lg:flex-row gap-10 relative px-3 py-10 lg:px-20 ">
+        <h2 className="inline-block lg:hidden text-4xl text-center font-bold leading-tight text-dark-brown">
           Tko se krije iza Čitala?
         </h2>
-        <div className="w-full my-auto md:w-1/2 ">
+        <div className="w-full my-auto lg:w-1/2 ">
           <Image
             className="h-[35em] w-full object-cover border-[15px] rounded-lg  border-light-brown"
             alt={'Fotografija knjige'}
@@ -27,11 +27,11 @@ const OMeni: FC = () => {
             DEFINICIJA: 1. hip. <em>onaj koji čita</em>
           </p>
         </div>
-        <div className="w-full md:w-1/2 font-[300] flex flex-col  items-center">
-          <h2 className="hidden md:inline-block text-4xl text-center font-bold leading-tight text-dark-brown">
+        <div className="w-full lg:w-1/2 font-[300] flex flex-col  items-center">
+          <h2 className="hidden lg:inline-block text-4xl text-center font-bold leading-tight text-dark-brown">
             Tko se krije iza Čitala?
           </h2>
-          <p className="  font-light  leading-loose  pt-0 md:pt-5  text-justify">
+          <p className="  font-light  leading-loose  pt-0 lg:pt-5  text-justify">
             Jedna Tamara sa zagrebačkom adresom, zaljubljena u knjige. Tamara
             koja je 13.01.2022. godine imala viška vremena za pisanje dojmova o
             pročitanim knjigama, pa ih je odlučila sačuvati i podijeliti s

@@ -56,7 +56,7 @@ const InputSearchBar: FC<ArticleProps> = ({
         onSubmit={(e) => {
           e.preventDefault();
         }}
-        className="mx-auto relative flex  flex-col justify-between rounded-lg border p-2 sm:flex-row sm:items-center sm:p-0 md:w-1/2 w-full"
+        className="mx-auto relative flex  flex-col justify-between rounded-lg border p-2 sm:flex-row sm:items-center sm:p-0 lg:w-1/2 w-full"
       >
         <input
           type="name"

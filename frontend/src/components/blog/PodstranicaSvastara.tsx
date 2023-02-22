@@ -17,13 +17,13 @@ const PodstranicaSvastara: FC<PodStranicaBlogaSvastaraProps> = ({
         pageDescription={pageSeoDescription}
       />
 
-      <div className=" gap-10 relative px-3 md:px-20 pb-20">
+      <div className=" gap-10 relative px-3 lg:px-20 pb-20">
         <h2 className="text-4xl text-center font-bold leading-tight pb-6 text-dark-brown">
           {post.title}
         </h2>
         <div className="w-full  ">
           <Image
-            className="h-auto md:h-[35em] w-full object-cover border-[15px] rounded-lg  border-light-brown"
+            className="h-auto lg:h-[35em] w-full object-cover border-[15px] rounded-lg  border-light-brown"
             alt={'Fotografija knjige'}
             src={post.image}
             width={500}
@@ -38,7 +38,7 @@ const PodstranicaSvastara: FC<PodStranicaBlogaSvastaraProps> = ({
           fourthColor="#e7e5e4"
         />
       </div>
-      <div className="bg-[#e7e5e4] relative px-3 md:px-20 pb-10">
+      <div className="bg-[#e7e5e4] relative px-3 lg:px-20 pb-10">
         <div className="font-light  leading-loose sadrzaj--postova text-justify">
           <MDXRemote {...post.content} />
         </div>

@@ -19,13 +19,13 @@ const StranicaBloga: React.FC<StranicaBlogaProps> = ({
         pageTitle={pageSeoTitle}
         pageDescription={pageSeoDescription}
       />
-      <div className="mx-auto max-w-screen-xl px-4 md:px-8 relative pt-10 pb-20">
-        <div className="mb-10 md:mb-16">
+      <div className="mx-auto max-w-screen-xl px-4 lg:px-8 relative pt-10 pb-20">
+        <div className="mb-10 lg:mb-16">
           <h2 className="text-4xl text-center font-bold leading-tight mb-10 relative text-dark-brown">
             {title}
           </h2>
 
-          <p className="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">
+          <p className="mx-auto max-w-screen-md text-center text-gray-500 lg:text-lg">
             {description}
           </p>
         </div>
@@ -43,7 +43,7 @@ const StranicaBloga: React.FC<StranicaBlogaProps> = ({
             />
           </div>
         ) : (
-          <div className="text-center text-gray-500 md:text-lg">
+          <div className="text-center text-gray-500 lg:text-lg">
             Ups! Ova stranica je (za sad) prazna. <br />
             <br />
             Vrati se na početnu stranicu: <br />

@@ -9,7 +9,7 @@ import { HiOutlineMail } from 'react-icons/hi';
 const Footer = () => {
   return (
     <footer className="bg-[#f0f0f0] shadow-md relative ">
-      <div className="mx-auto grid max-w-screen-xl gap-y-8 gap-x-12 px-4 py-10 md:grid-cols-2 xl:grid-cols-4 xl:px-10">
+      <div className="mx-auto grid max-w-screen-xl gap-y-8 gap-x-12 px-4 py-10 lg:grid-cols-2 xl:grid-cols-4 xl:px-10">
         <div className="max-w-sm">
           <div className="mb-3 flex h-12 items-center space-x-2">
             <Link
@@ -71,7 +71,7 @@ const Footer = () => {
           </nav>
         </div>
         <div className="">
-          <div className="mt-4 mb-2 font-medium xl:mb-4 -ml-0 md:-ml-6 select-none  ">
+          <div className="mt-4 mb-2 font-medium xl:mb-4 -ml-0 lg:-ml-6 select-none  ">
             <div className="mt-4 mb-2 font-medium xl:mb-4 select-none">
               Website by:
             </div>
