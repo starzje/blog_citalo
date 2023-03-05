@@ -13,7 +13,7 @@ const Nav: FC<MobileMenuProps> = ({ isOpen, setIsOpen }) => {
   return (
     <header className="container mx-auto flex items-center relative justify-between h-[85px] py-5 px-4  ">
       <Image
-        className="w-[80px] absolute -bottom-4 left-[40%] lg:left-[11%] "
+        className="w-[60px] absolute -bottom-4 left-[44%] lg:left-[12%] "
         src={logo}
         alt="logo"
         width={80}
@@ -31,7 +31,7 @@ const Nav: FC<MobileMenuProps> = ({ isOpen, setIsOpen }) => {
       </Link>
       <p className="hidden lg:inline-block border font-light text-dark-brown border-black p-2 rounded-2xl">
         Danas čitam:{' '}
-        <span className=" text-dark-brown">Sedam muževa Evelyn Hugo </span>
+        <span className=" text-dark-brown">Putnici - John Marrs </span>
       </p>
       <nav>
         <ul className="hidden lg:flex items-center space-x-1">
