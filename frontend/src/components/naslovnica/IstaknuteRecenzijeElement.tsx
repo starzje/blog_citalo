@@ -24,7 +24,6 @@ const IstaknuteRecenzijeElement: FC<IstaknuteRecenzijeElementProps> = ({
           width={500}
           height={500}
           src={
-            process.env.NEXT_PUBLIC_BASE_URL +
             recenzija.attributes.image.data.attributes.url
           }
         />

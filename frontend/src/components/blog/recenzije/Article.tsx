@@ -16,7 +16,6 @@ const Article: FC<{
       >
         <Image
           src={
-            process.env.NEXT_PUBLIC_BASE_URL +
             posts.attributes.image.data.attributes.url
           }
           loading="lazy"
